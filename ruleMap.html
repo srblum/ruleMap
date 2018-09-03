@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+	<head>
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<style>
+			.minimap {
+			  fill: white;
+			  stroke: black;
+			}
+			.node { 
+			  cursor: pointer; 
+			}
+			.node rect{
+			  opacity:0.35;
+			  stroke:black;
+			  stroke-width:1.2px;
+			  rx:2;
+			  ry:2;
+			}
+			.link {
+			  fill: none;
+			  stroke: grey;
+			  stroke-width:1px;
+			}
+			g.brush > .handle {
+				display: none;
+			}
+			.overlay {
+			  pointer-events: none;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+				var input_file = "big.json"
+
+				var i = 0,
+					mr = 4,
+					nodeSuggestions = [],
+					root,gWidth,minZoom;
+
+				var width = 1000,
+					height = 600,
+					minimapWidth = width/mr,
+					minimapHeight,brush,zoom;
+
+				var svg = d3.select("body").append("svg")
+					.attr("width", width)
+					.attr("height", height)
+					.append("g")
+
+
+				d3.json(input_file, function(error, mttree) {
+					if (error) {
+						console.log(error);
+					} else {
+
+						var logic = mttree.data.logic
+						var subRules = mttree.data.subRules
+
+						function remove_GOTOs_and_ARFs(d){
+							var nodes = [d];
+							while(node = nodes.pop()){
+								if(node.GOTO){
+									var children = subRules[node.GOTO]['children']
+									node.children = children
+									// nodes.push.apply(nodes,children)
+								}
+								if(node.children){
+									var newChildren = []
+									for(var i=0; i<node.children.length;i++){
+										var child = node.children[i]
+										if(child.entity.entityType.name==='CONDITION_ALWAYS'){
+											for(var j=0;j<child.children.length;j++){
+												var grandChild = child.children[j]
+												newChildren.push(grandChild)
+												nodes.push(grandChild)
+											}
+										}else{
+											newChildren.push(child)
+											nodes.push(child)
+										}
+									}
+									node.children = newChildren
+								}
+							}
+						}
+
+						remove_GOTOs_and_ARFs(logic)
+
+						root = d3.hierarchy(logic, function(d){return d.children || null})
+
+						//Create hidden svg text elements for each node to pre-compute their widths
+						root.descendants().forEach(function(d){
+							var name = d.data.entity.name
+							var g = document.createElementNS('http://www.w3.org/2000/svg','g')
+							var text = document.createElementNS('http://www.w3.org/2000/svg','text')
+							var innerText = document.createTextNode(name)
+							text.appendChild(innerText)
+							g.appendChild(text)
+							g.classList.add('node')
+							var svg = document.querySelector('svg')
+							svg.appendChild(g)
+							text.style.cssText="font: 18px;letter-spacing: 0.5px;"
+							var bbox_width = text.getBBox().width
+							text.removeChild(innerText)
+							g.removeChild(text)
+							svg.removeChild(g)
+							d.bbox_width = bbox_width
+						});
+
+						leafs = root.leaves().length
+						if(leafs > 15){
+							treemap = d3.tree().size([height * leafs/15, width])
+						}else{
+							treemap = d3.tree().size([height, width])
+						}
+
+						treemap(root)
+
+						root.y = 100
+						var n = 1
+						var maxWidth = root.bbox_width
+						gWidth = 0
+
+						while(true){
+							var level = []
+							root.each(function(d){
+								if(d.depth===n){
+									d.y = d.parent.y + maxWidth + 100
+									level.push(d)
+									gWidth = Math.max(gWidth,d.y + d.bbox_width)
+								}
+							})
+							maxWidth = d3.max(level, d => d.bbox_width)
+							
+							if(level.length === 0){
+								break
+							}
+							n+=1
+						}
+
+						yMin = d3.min(root.leaves(),d=>+d.x)
+						yMax = d3.max(root.leaves(),d=>+d.x)
+						gHeight = yMax - yMin
+						minZoom = width/gWidth
+						maxZoom = minZoom * 4
+						gHeight=gHeight > height / minZoom ? gHeight : height / minZoom 
+
+						// root.descendants().forEach(function(d){d.x = d.x + gHeight/2})
+
+						// Compute the new tree layout.
+						var nodes = root.descendants()
+						var links = nodes.slice(1)
+						
+						// Update the nodes...
+						var node_elems = svg.selectAll('g.node')
+							.data(nodes, function(d) {return d.id || (d.id = ++i) })
+							.enter().append('g')
+							.attr('class', 'node')
+							.attr("id", function(d) { return 'node' + d.id })
+							.attr("transform", function(d) { return `translate(${d.y},${d.x})`})
+							.on("click",clicked)
+
+						// Add labels for the nodes
+						node_elems.append("text")
+							.attr("x", -10)
+							.attr("dy", ".35em")
+							.attr("text-anchor", "start")
+							.html(function(d) { return d.data.entity.name })
+							.style('font','18px')
+							.style('letter-spacing','0.5px')
+							.attr('textLength',function(d){return this.getBBox().width})
+
+						//Add rectangle surrounding node
+						node_elems.insert('rect','text')
+							.each(function(d){
+								var rect = d3.select(this)
+								var bbox = this.nextSibling.getBBox()
+								var type = d.data.entity.entityType.name
+								if(type === 'TOPIC'){
+									color = "#6D256C"
+								}else if(type === 'ADVICE' || type === 'OUTCOME'){
+									color = "#FAAB18"
+								}else if(type === 'INPUT_REQUEST'){
+									color = "#3DB1F2"
+								}else if(type === 'CONDITION'){
+									color = "#CE1B6D"
+								}else if(d.data.GOTO){
+									color = "yellow"
+								}else{
+									color = "white"
+								}
+									rect.attr('x', bbox.x-5)
+										.attr('y',bbox.y-2)
+										.attr('width', bbox.width+10)
+										.attr('height',bbox.height+4)
+										.attr('fill',color)
+										.attr('rx',2)
+										.attr('ry',2)
+							});
+
+						var link = svg.selectAll('path.link')
+							.data(links, function(d) { return d.id; })
+							.enter().insert('path','g')
+							.attr("class", "link")
+							.attr('d', function(d){return connection(d.parent, d)})
+						 
+						
+						minimapHeight = minimapWidth * gHeight/gWidth
+						mr = gWidth / minimapWidth
+
+						minimap = d3.select('svg')
+							.append('g')
+							.attr("transform", "translate(" + (width - minimapWidth)  + "," +  (height - minimapHeight) + ")");
+
+						minimap.raise()
+
+						minimap.append("rect")
+							.attr("class", "minimap")
+							.attr("width", minimapWidth)
+							.attr("height", minimapHeight)
+
+						brush = d3.brush()
+							.extent([[0, 0], [minimapWidth, minimapHeight]])
+							.on("brush", brushed)
+
+						zoom = d3.zoom().on("zoom",zoomed)
+								.translateExtent([[0,0],[gWidth,gHeight]])
+								.scaleExtent([minZoom,maxZoom])
+
+						d3.select('svg').call(zoom)
+							.on("dblclick.zoom", null)
+
+						minimap.append("g")
+							.attr("class", "brush")
+							.call(brush)
+							.call(brush.move, [[0, 0], [minimapWidth/2, minimapHeight/2]])
+				}});
+
+				// Creates a right-angle path from parent to the child nodes
+				function connection(s, d) {
+					sY = s.y + s.bbox_width
+					path = `M ${sY - 5} ${s.x}
+							L ${d.y - 45},${s.x}
+							L ${d.y - 45},${d.x}
+							L ${d.y - 15},${d.x}`
+					return path
+				}
+
+				function clicked(d){
+					console.log(d)
+				}
+
+				svgEl = document.querySelector('svg')
+				
+				function zoomed(){
+				  var t = d3.event.transform
+				  var kr = t.k/minZoom
+				  brush.move(d3.select('.brush'),	[	[-t.x/mr/t.k,
+				  										-t.y/mr/t.k],
+				  										[-t.x/mr/t.k+minimapWidth/kr,
+				  										-t.y/mr/t.k+minimapHeight/kr]
+				  									]);
+				}
+				
+				function brushed() {
+				  var s = d3.event.selection
+				  var c0 = s[0]
+				  var c1 = s[1]
+
+				  //minimap coordinates
+				  var x0 = c0[0]
+				  var y0 = c0[1]
+				  var x1 = c1[0]
+				  var y1 = c1[1]
+
+				  var scale = minimapWidth/(x1-x0) * minZoom
+
+				  svgEl.__zoom.x = -x0*scale*mr
+				  svgEl.__zoom.y = -y0*scale*mr
+				  svgEl.__zoom.k = scale
+
+				  svg.attr("transform",`translate(${-x0*scale*mr},${-y0*scale*mr})scale(${scale})`)
+				}
+		</script>
+	</body>

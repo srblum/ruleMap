@@ -1,0 +1,2888 @@
+{
+  "data": {
+    "logic": {
+      "ruleSetCategoryId": "rkZs_JMyz",
+      "ruleSetId": "r1V8D1Esf",
+      "id": "SJo-dkEsf",
+      "nodeId": "JUSJo-dkEsf",
+      "level1Id": "SJo-dkEsf",
+      "level2Id": null,
+      "level3Id": null,
+      "parentId": "r1V8D1Esf",
+      "siblingSequence": 1,
+      "sortOrder": "001",
+      "level": 1,
+      "ruleUpdatedAt": "2018-07-10T19:51:12.297Z",
+      "createdAt": "2018-04-05T18:16:35.058Z",
+      "updatedAt": "2018-04-05T18:16:35.078Z",
+      "entityId": "HJxiZOyNiz",
+      "ownerId": "JU",
+      "owner": {
+        "name": "Just Good Advice"
+      },
+      "entity": {
+        "meta": {
+          "isQuestion": false
+        },
+        "id": "HJxiZOyNiz",
+        "entityId": "JUHJxiZOyNiz",
+        "name": "What type of tax-deferred retirement plan should my business sponsor?",
+        "reservedName": "Retirement Plan Chooser for Company Sponsors",
+        "description": "https://www.fidelity.com/retirement-ira/small-business/compare-plans",
+        "entitiesUsed": [],
+        "call_node_id": null,
+        "content": "",
+        "contentRaw": [],
+        "status": {
+          "isComplete": true
+        },
+        "createdAt": "2018-04-05T18:16:35.059Z",
+        "updatedAt": "2018-07-10T19:51:12.297Z",
+        "ownerId": "JU",
+        "entityTypeId": "SklaMoGcuW",
+        "entityType": {
+          "displayName": "Rule",
+          "displayNamePlural": "Rules",
+          "id": "SklaMoGcuW",
+          "name": "TOPIC"
+        }
+      },
+      "evaluation": "",
+      "children": [
+        {
+          "ruleSetCategoryId": "rkZs_JMyz",
+          "ruleSetId": "r1V8D1Esf",
+          "id": "BJ-s-dJEjz",
+          "nodeId": "JUBJ-s-dJEjz",
+          "level1Id": "SJo-dkEsf",
+          "level2Id": "BJ-s-dJEjz",
+          "level3Id": null,
+          "parentId": "SJo-dkEsf",
+          "siblingSequence": 1,
+          "sortOrder": "001001",
+          "level": 2,
+          "ruleUpdatedAt": "2018-04-05T18:16:35.107Z",
+          "createdAt": "2018-04-05T18:16:35.103Z",
+          "updatedAt": "2018-04-05T18:18:00.070Z",
+          "entityId": "B18VTQid-",
+          "ownerId": "JU",
+          "owner": {
+            "name": "Just Good Advice"
+          },
+          "entity": {
+            "meta": {},
+            "id": "B18VTQid-",
+            "entityId": "JUB18VTQid-",
+            "name": "Always Run First",
+            "reservedName": "_Always Run First",
+            "description": "This condition is set to true and is used to run outcomes that always need to run BEFORE the tests.",
+            "entitiesUsed": null,
+            "call_node_id": null,
+            "content": null,
+            "contentRaw": [],
+            "status": {},
+            "createdAt": "2017-08-23T16:28:30.247Z",
+            "updatedAt": "2017-08-23T16:28:30.247Z",
+            "ownerId": "JU",
+            "entityTypeId": "rkBTcGidb",
+            "entityType": {
+              "displayName": "Condition (Always)",
+              "displayNamePlural": "Condition (Always)S",
+              "id": "rkBTcGidb",
+              "name": "CONDITION_ALWAYS"
+            }
+          },
+          "evaluation": null,
+          "data": {
+            "base": {
+              "meta": {},
+              "id": "B18VTQid-",
+              "reservedName": "_Always Run First",
+              "content": null,
+              "contentRaw": [],
+              "entitiesUsed": null,
+              "entityTypeId": "rkBTcGidb"
+            },
+            "formulas": [],
+            "variables": []
+          },
+          "children": [
+            {
+              "ruleSetCategoryId": "rkZs_JMyz",
+              "ruleSetId": "r1V8D1Esf",
+              "id": "By5X5rzQ7",
+              "nodeId": "JUBy5X5rzQ7",
+              "level1Id": "SJo-dkEsf",
+              "level2Id": "BJ-s-dJEjz",
+              "level3Id": "By5X5rzQ7",
+              "parentId": "BJ-s-dJEjz",
+              "siblingSequence": 1,
+              "sortOrder": "001001001",
+              "level": 3,
+              "ruleUpdatedAt": "2018-07-10T15:00:50.092Z",
+              "createdAt": "2018-07-10T15:00:50.081Z",
+              "updatedAt": "2018-07-10T15:00:50.106Z",
+              "entityId": "Hyl9QqSMXQ",
+              "ownerId": "JU",
+              "owner": {
+                "name": "Just Good Advice"
+              },
+              "entity": {
+                "meta": {
+                  "isQuestion": "true"
+                },
+                "id": "Hyl9QqSMXQ",
+                "entityId": "JUHyl9QqSMXQ",
+                "name": "Are there any employees other than a spouse?",
+                "reservedName": "Employees to include?",
+                "description": null,
+                "entitiesUsed": [],
+                "call_node_id": "BJp7crM7Q",
+                "content": null,
+                "contentRaw": [],
+                "status": {
+                  "isComplete": true
+                },
+                "createdAt": "2018-07-10T15:00:50.083Z",
+                "updatedAt": "2018-07-10T15:00:52.894Z",
+                "ownerId": "JU",
+                "entityTypeId": "SyAx6zqOZ",
+                "entityType": {
+                  "displayName": "Rule Call",
+                  "displayNamePlural": "Rule Calls",
+                  "id": "SyAx6zqOZ",
+                  "name": "EMBEDDED_RULE"
+                }
+              },
+              "GOTO": "BJp7crM7Q",
+              "data": {
+                "base": {
+                  "meta": {
+                    "isQuestion": "true"
+                  },
+                  "id": "Hyl9QqSMXQ",
+                  "reservedName": "Employees to include?",
+                  "content": null,
+                  "contentRaw": [],
+                  "entitiesUsed": [],
+                  "entityTypeId": "SyAx6zqOZ"
+                },
+                "formulas": [],
+                "variables": []
+              }
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "href": "https://staging.justgoodadvice.com/api/rule/SJo-dkEsf/node/SJo-dkEsf/attachment/S1xxP_yVof/view",
+          "data": {
+            "meta": {
+              "s3": {
+                "ETag": "\"6096cc628015d89e3b384065bf16e0a5\"",
+                "VersionId": "kCRQVOO52M_LawEbeOKvWgj2tC87yFHO"
+              },
+              "size": 827053,
+              "mimetype": "image/png",
+              "source": "rulePartEditor",
+              "sourceEnv": "staging",
+              "sizeHuman": "827.1 KB"
+            },
+            "id": "ryWlwdyVjG",
+            "entityId": "JUryWlwdyVjG",
+            "name": "JT-38.png",
+            "reservedName": "SJo-dkEsf-r1gPdkNsz-JT-38.png",
+            "description": "Attachment on SJo-dkEsf",
+            "entitiesUsed": [],
+            "call_node_id": null,
+            "content": null,
+            "contentRaw": [],
+            "status": {},
+            "createdAt": "2018-04-05T18:18:00.046Z",
+            "updatedAt": "2018-04-05T18:18:00.046Z",
+            "ownerId": "JU",
+            "entityTypeId": "BJf5HL9OPf",
+            "entityType": {
+              "displayName": "Attachment",
+              "displayNamePlural": "Attachments",
+              "id": "BJf5HL9OPf",
+              "name": "ATTACHMENT"
+            }
+          }
+        }
+      ],
+      "ruleVariables": [],
+      "ruleFormulas": []
+    },
+    "ruleSetFormulas": [],
+    "ruleSetVariables": [
+      {
+        "meta": {
+          "dataType": "Boolean"
+        },
+        "id": "SkFpiSzm7",
+        "reservedName": "Employees_Other_Than_Spouse",
+        "content": null,
+        "contentRaw": [],
+        "entitiesUsed": [],
+        "entityTypeId": "r1iNnz5_b",
+        "result": {
+          "value": "'Invalid Value'",
+          "err": "Could not be evaluated. Check inputs."
+        }
+      },
+      {
+        "meta": {
+          "dataType": "Boolean"
+        },
+        "id": "HybWZxF1G",
+        "reservedName": "No",
+        "content": "false",
+        "contentRaw": [
+          "false"
+        ],
+        "entitiesUsed": [],
+        "entityTypeId": "r1iNnz5_b",
+        "result": {
+          "value": false
+        }
+      },
+      {
+        "meta": {
+          "dataType": "String",
+          "values": [
+            "Employer",
+            "Employee"
+          ]
+        },
+        "id": "r1nU6LfQ7",
+        "reservedName": "Retirement_Plan_Funding_Source",
+        "content": null,
+        "contentRaw": [],
+        "entitiesUsed": [],
+        "entityTypeId": "r1iNnz5_b",
+        "result": {
+          "value": "'Invalid Value'",
+          "err": "Could not be evaluated. Check inputs."
+        }
+      },
+      {
+        "id": "IMzqaGZVvS",
+        "reservedName": "rule_2_selection",
+        "content": null,
+        "contentRaw": [],
+        "entitiesUsed": [],
+        "entityTypeId": "r1iNnz5_b",
+        "meta": {
+          "dataType": "MultipleChoice",
+          "values": [
+            {
+              "meta": {},
+              "id": "rJg-goBfQm",
+              "entityId": "JUrJg-goBfQm",
+              "name": "No. There are no employees other than a spouse.",
+              "reservedName": null,
+              "description": null,
+              "entitiesUsed": [
+                "SkFpiSzm7",
+                "HybWZxF1G"
+              ],
+              "call_node_id": null,
+              "content": "{{Employees_Other_Than_Spouse}} == {{No}}",
+              "contentRaw": [
+                "{{SkFpiSzm7}}",
+                "==",
+                "{{HybWZxF1G}}"
+              ],
+              "status": {},
+              "createdAt": "2018-07-10T15:04:09.416Z",
+              "updatedAt": "2018-07-10T15:11:18.027Z",
+              "ownerId": "JU",
+              "entityTypeId": "S1pXhG9uZ",
+              "entityType": {
+                "displayName": "Condition",
+                "displayNamePlural": "Conditions",
+                "id": "S1pXhG9uZ",
+                "name": "CONDITION"
+              }
+            },
+            {
+              "meta": {},
+              "id": "rJgVgorz7X",
+              "entityId": "JUrJgVgorz7X",
+              "name": "Yes. There are employees other than a spouse.",
+              "reservedName": null,
+              "description": null,
+              "entitiesUsed": [
+                "SkFpiSzm7",
+                "HkgY-lxFkG"
+              ],
+              "call_node_id": null,
+              "content": "{{Employees_Other_Than_Spouse}} == {{Yes}}",
+              "contentRaw": [
+                "{{SkFpiSzm7}}",
+                "==",
+                "{{HkgY-lxFkG}}"
+              ],
+              "status": {},
+              "createdAt": "2018-07-10T15:04:11.885Z",
+              "updatedAt": "2018-07-10T15:56:26.980Z",
+              "ownerId": "JU",
+              "entityTypeId": "S1pXhG9uZ",
+              "entityType": {
+                "displayName": "Condition",
+                "displayNamePlural": "Conditions",
+                "id": "S1pXhG9uZ",
+                "name": "CONDITION"
+              }
+            }
+          ]
+        },
+        "result": {
+          "value": "'Invalid Value'"
+        }
+      },
+      {
+        "id": "LS8a6leZrU",
+        "reservedName": "rule_3_selection",
+        "content": null,
+        "contentRaw": [],
+        "entitiesUsed": [],
+        "entityTypeId": "r1iNnz5_b",
+        "meta": {
+          "dataType": "MultipleChoice",
+          "values": [
+            {
+              "meta": {},
+              "id": "BJg6Yi8MX7",
+              "entityId": "JUBJg6Yi8MX7",
+              "name": "It will be funded solely by employer contributions.",
+              "reservedName": null,
+              "description": null,
+              "entitiesUsed": [
+                "r1nU6LfQ7"
+              ],
+              "call_node_id": null,
+              "content": "{{Retirement_Plan_Funding_Source}} == \"Employer\"",
+              "contentRaw": [
+                "{{r1nU6LfQ7}}",
+                "==",
+                "\"Employer\""
+              ],
+              "status": {},
+              "createdAt": "2018-07-10T16:15:01.311Z",
+              "updatedAt": "2018-07-10T16:23:40.938Z",
+              "ownerId": "JU",
+              "entityTypeId": "S1pXhG9uZ",
+              "entityType": {
+                "displayName": "Condition",
+                "displayNamePlural": "Conditions",
+                "id": "S1pXhG9uZ",
+                "name": "CONDITION"
+              }
+            },
+            {
+              "meta": {},
+              "id": "Bylk5jLzmX",
+              "entityId": "JUBylk5jLzmX",
+              "name": "It will be primarily funded by employees and may include employer contributions.",
+              "reservedName": null,
+              "description": null,
+              "entitiesUsed": [
+                "r1nU6LfQ7"
+              ],
+              "call_node_id": null,
+              "content": "{{Retirement_Plan_Funding_Source}} == \"Employee\"",
+              "contentRaw": [
+                "{{r1nU6LfQ7}}",
+                "==",
+                "\"Employee\""
+              ],
+              "status": {},
+              "createdAt": "2018-07-10T16:15:03.312Z",
+              "updatedAt": "2018-07-10T16:28:49.873Z",
+              "ownerId": "JU",
+              "entityTypeId": "S1pXhG9uZ",
+              "entityType": {
+                "displayName": "Condition",
+                "displayNamePlural": "Conditions",
+                "id": "S1pXhG9uZ",
+                "name": "CONDITION"
+              }
+            }
+          ]
+        },
+        "result": {
+          "value": "'Invalid Value'"
+        }
+      },
+      {
+        "id": "koPgvmiC0x",
+        "reservedName": "rule_4_selection",
+        "content": null,
+        "contentRaw": [],
+        "entitiesUsed": [],
+        "entityTypeId": "r1iNnz5_b",
+        "meta": {
+          "dataType": "MultipleChoice",
+          "values": [
+            {
+              "meta": {},
+              "id": "rJgOlYKz7m",
+              "entityId": "JUrJgOlYKz7m",
+              "name": "Having a low cost plan is most important.",
+              "reservedName": null,
+              "description": null,
+              "entitiesUsed": [],
+              "call_node_id": null,
+              "content": null,
+              "contentRaw": [],
+              "status": {},
+              "createdAt": "2018-07-10T19:28:48.210Z",
+              "updatedAt": "2018-07-10T19:29:26.891Z",
+              "ownerId": "JU",
+              "entityTypeId": "S1pXhG9uZ",
+              "entityType": {
+                "displayName": "Condition",
+                "displayNamePlural": "Conditions",
+                "id": "S1pXhG9uZ",
+                "name": "CONDITION"
+              }
+            },
+            {
+              "meta": {},
+              "id": "HkeoxtFGm7",
+              "entityId": "JUHkeoxtFGm7",
+              "name": "Maximizing annual contributions is most important.",
+              "reservedName": null,
+              "description": null,
+              "entitiesUsed": [],
+              "call_node_id": null,
+              "content": null,
+              "contentRaw": [],
+              "status": {},
+              "createdAt": "2018-07-10T19:28:50.860Z",
+              "updatedAt": "2018-07-10T19:30:05.063Z",
+              "ownerId": "JU",
+              "entityTypeId": "S1pXhG9uZ",
+              "entityType": {
+                "displayName": "Condition",
+                "displayNamePlural": "Conditions",
+                "id": "S1pXhG9uZ",
+                "name": "CONDITION"
+              }
+            }
+          ]
+        },
+        "result": {
+          "value": "'Invalid Value'"
+        }
+      },
+      {
+        "meta": {
+          "dataType": "Boolean"
+        },
+        "id": "HkgY-lxFkG",
+        "reservedName": "Yes",
+        "content": "true",
+        "contentRaw": [
+          "true"
+        ],
+        "entitiesUsed": [],
+        "entityTypeId": "r1iNnz5_b",
+        "result": {
+          "value": true
+        }
+      }
+    ],
+    "subRules": {
+      "BJp7crM7Q": {
+        "ruleSetCategoryId": "rkZs_JMyz",
+        "ruleSetId": "r1V8D1Esf",
+        "id": "BJp7crM7Q",
+        "nodeId": "JUBJp7crM7Q",
+        "level1Id": "BJp7crM7Q",
+        "level2Id": null,
+        "level3Id": null,
+        "parentId": "r1V8D1Esf",
+        "siblingSequence": 2,
+        "sortOrder": "002",
+        "level": 1,
+        "ruleUpdatedAt": "2018-07-10T16:45:25.476Z",
+        "createdAt": "2018-07-10T15:00:52.665Z",
+        "updatedAt": "2018-07-10T15:00:52.692Z",
+        "entityId": "BkaX9SzmQ",
+        "ownerId": "JU",
+        "owner": {
+          "name": "Just Good Advice"
+        },
+        "entity": {
+          "meta": {
+            "isQuestion": "true"
+          },
+          "id": "BkaX9SzmQ",
+          "entityId": "JUBkaX9SzmQ",
+          "name": "Are there any employees other than a spouse?",
+          "reservedName": "Employees to include?",
+          "description": null,
+          "entitiesUsed": [],
+          "call_node_id": null,
+          "content": null,
+          "contentRaw": [],
+          "status": {
+            "isComplete": true
+          },
+          "createdAt": "2018-07-10T15:00:52.667Z",
+          "updatedAt": "2018-07-10T16:07:14.944Z",
+          "ownerId": "JU",
+          "entityTypeId": "SklaMoGcuW",
+          "entityType": {
+            "displayName": "Rule",
+            "displayNamePlural": "Rules",
+            "id": "SklaMoGcuW",
+            "name": "TOPIC"
+          }
+        },
+        "evaluation": null,
+        "children": [
+          {
+            "ruleSetCategoryId": "rkZs_JMyz",
+            "ruleSetId": "r1V8D1Esf",
+            "id": "S1lam5Hf7m",
+            "nodeId": "JUS1lam5Hf7m",
+            "level1Id": "BJp7crM7Q",
+            "level2Id": "S1lam5Hf7m",
+            "level3Id": null,
+            "parentId": "BJp7crM7Q",
+            "siblingSequence": 1,
+            "sortOrder": "002001",
+            "level": 2,
+            "ruleUpdatedAt": "2018-07-10T15:00:52.726Z",
+            "createdAt": "2018-07-10T15:00:52.724Z",
+            "updatedAt": "2018-07-10T15:00:52.749Z",
+            "entityId": "B18VTQid-",
+            "ownerId": "JU",
+            "owner": {
+              "name": "Just Good Advice"
+            },
+            "entity": {
+              "meta": {},
+              "id": "B18VTQid-",
+              "entityId": "JUB18VTQid-",
+              "name": "Always Run First",
+              "reservedName": "_Always Run First",
+              "description": "This condition is set to true and is used to run outcomes that always need to run BEFORE the tests.",
+              "entitiesUsed": null,
+              "call_node_id": null,
+              "content": null,
+              "contentRaw": [],
+              "status": {},
+              "createdAt": "2017-08-23T16:28:30.247Z",
+              "updatedAt": "2017-08-23T16:28:30.247Z",
+              "ownerId": "JU",
+              "entityTypeId": "rkBTcGidb",
+              "entityType": {
+                "displayName": "Condition (Always)",
+                "displayNamePlural": "Condition (Always)S",
+                "id": "rkBTcGidb",
+                "name": "CONDITION_ALWAYS"
+              }
+            },
+            "evaluation": null,
+            "data": {
+              "base": {
+                "meta": {},
+                "id": "B18VTQid-",
+                "reservedName": "_Always Run First",
+                "content": null,
+                "contentRaw": [],
+                "entitiesUsed": null,
+                "entityTypeId": "rkBTcGidb"
+              },
+              "formulas": [],
+              "variables": []
+            },
+            "children": [
+              {
+                "ruleSetCategoryId": "rkZs_JMyz",
+                "ruleSetId": "r1V8D1Esf",
+                "id": "h4EbN4NMX",
+                "nodeId": "JUBJp7crM7Q",
+                "level1Id": "BJp7crM7Q",
+                "level2Id": "S1lam5Hf7m",
+                "level3Id": "h4EbN4NMX",
+                "parentId": "S1lam5Hf7m",
+                "siblingSequence": 1,
+                "sortOrder": "001001001",
+                "level": 3,
+                "ruleUpdatedAt": "2018-07-10T16:45:25.476Z",
+                "createdAt": "2018-07-10T15:00:52.665Z",
+                "updatedAt": "2018-07-10T15:00:52.692Z",
+                "entityId": "Yq2PNar6IL",
+                "ownerId": "JU",
+                "owner": {
+                  "name": "Just Good Advice"
+                },
+                "entity": {
+                  "meta": {
+                    "isQuestion": "true"
+                  },
+                  "id": "Yq2PNar6IL",
+                  "entityId": "JUBkaX9SzmQ",
+                  "name": "Are there any employees other than a spouse?",
+                  "reservedName": "Employees to include?",
+                  "description": null,
+                  "entitiesUsed": [
+                    "IMzqaGZVvS"
+                  ],
+                  "call_node_id": null,
+                  "content": "{{rule_2_selection}}",
+                  "contentRaw": [
+                    "{{IMzqaGZVvS}}"
+                  ],
+                  "status": {
+                    "isComplete": true
+                  },
+                  "createdAt": "2018-07-10T15:00:52.667Z",
+                  "updatedAt": "2018-07-10T16:07:14.944Z",
+                  "ownerId": "JU",
+                  "entityTypeId": "HkgTgX7_f",
+                  "entityType": {
+                    "displayName": "Rule",
+                    "displayNamePlural": "Rules",
+                    "id": "SklaMoGcuW",
+                    "name": "INPUT_REQUEST"
+                  }
+                },
+                "question": "Are there any employees other than a spouse?",
+                "data": {
+                  "base": {
+                    "id": "Yq2PNar6IL",
+                    "reservedName": null,
+                    "content": "{{rule_2_selection}}",
+                    "contentRaw": [
+                      "{{IMzqaGZVvS}}"
+                    ],
+                    "entitiesUsed": [
+                      "IMzqaGZVvS"
+                    ],
+                    "entityTypeId": "HkgTgX7_f",
+                    "meta": {}
+                  },
+                  "formulas": [],
+                  "variables": [
+                    {
+                      "id": "IMzqaGZVvS",
+                      "reservedName": "rule_2_selection",
+                      "content": null,
+                      "contentRaw": [],
+                      "entitiesUsed": [],
+                      "entityTypeId": "r1iNnz5_b",
+                      "meta": {
+                        "dataType": "MultipleChoice",
+                        "values": [
+                          {
+                            "meta": {},
+                            "id": "rJg-goBfQm",
+                            "entityId": "JUrJg-goBfQm",
+                            "name": "No. There are no employees other than a spouse.",
+                            "reservedName": null,
+                            "description": null,
+                            "entitiesUsed": [
+                              "SkFpiSzm7",
+                              "HybWZxF1G"
+                            ],
+                            "call_node_id": null,
+                            "content": "{{Employees_Other_Than_Spouse}} == {{No}}",
+                            "contentRaw": [
+                              "{{SkFpiSzm7}}",
+                              "==",
+                              "{{HybWZxF1G}}"
+                            ],
+                            "status": {},
+                            "createdAt": "2018-07-10T15:04:09.416Z",
+                            "updatedAt": "2018-07-10T15:11:18.027Z",
+                            "ownerId": "JU",
+                            "entityTypeId": "S1pXhG9uZ",
+                            "entityType": {
+                              "displayName": "Condition",
+                              "displayNamePlural": "Conditions",
+                              "id": "S1pXhG9uZ",
+                              "name": "CONDITION"
+                            }
+                          },
+                          {
+                            "meta": {},
+                            "id": "rJgVgorz7X",
+                            "entityId": "JUrJgVgorz7X",
+                            "name": "Yes. There are employees other than a spouse.",
+                            "reservedName": null,
+                            "description": null,
+                            "entitiesUsed": [
+                              "SkFpiSzm7",
+                              "HkgY-lxFkG"
+                            ],
+                            "call_node_id": null,
+                            "content": "{{Employees_Other_Than_Spouse}} == {{Yes}}",
+                            "contentRaw": [
+                              "{{SkFpiSzm7}}",
+                              "==",
+                              "{{HkgY-lxFkG}}"
+                            ],
+                            "status": {},
+                            "createdAt": "2018-07-10T15:04:11.885Z",
+                            "updatedAt": "2018-07-10T15:56:26.980Z",
+                            "ownerId": "JU",
+                            "entityTypeId": "S1pXhG9uZ",
+                            "entityType": {
+                              "displayName": "Condition",
+                              "displayNamePlural": "Conditions",
+                              "id": "S1pXhG9uZ",
+                              "name": "CONDITION"
+                            }
+                          }
+                        ]
+                      },
+                      "result": {
+                        "value": "'Invalid Value'"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "ruleSetCategoryId": "rkZs_JMyz",
+            "ruleSetId": "r1V8D1Esf",
+            "id": "ry-xjrzmQ",
+            "nodeId": "JUry-xjrzmQ",
+            "level1Id": "BJp7crM7Q",
+            "level2Id": "ry-xjrzmQ",
+            "level3Id": null,
+            "parentId": "BJp7crM7Q",
+            "siblingSequence": 2,
+            "sortOrder": "002002",
+            "level": 2,
+            "ruleUpdatedAt": "2018-07-10T15:04:09.425Z",
+            "createdAt": "2018-07-10T15:04:09.415Z",
+            "updatedAt": "2018-07-10T15:04:09.442Z",
+            "entityId": "rJg-goBfQm",
+            "ownerId": "JU",
+            "owner": {
+              "name": "Just Good Advice"
+            },
+            "entity": {
+              "meta": {},
+              "id": "rJg-goBfQm",
+              "entityId": "JUrJg-goBfQm",
+              "name": "No. There are no employees other than a spouse.",
+              "reservedName": null,
+              "description": null,
+              "entitiesUsed": [
+                "SkFpiSzm7",
+                "HybWZxF1G"
+              ],
+              "call_node_id": null,
+              "content": "{{Employees_Other_Than_Spouse}} == {{No}}",
+              "contentRaw": [
+                "{{SkFpiSzm7}}",
+                "==",
+                "{{HybWZxF1G}}"
+              ],
+              "status": {},
+              "createdAt": "2018-07-10T15:04:09.416Z",
+              "updatedAt": "2018-07-10T15:11:18.027Z",
+              "ownerId": "JU",
+              "entityTypeId": "S1pXhG9uZ",
+              "entityType": {
+                "displayName": "Condition",
+                "displayNamePlural": "Conditions",
+                "id": "S1pXhG9uZ",
+                "name": "CONDITION"
+              }
+            },
+            "evaluation": "{{rule_2_selection}} == \"1\" || (!{{rule_2_selection}} && ({{Employees_Other_Than_Spouse}} == {{No}}))",
+            "data": {
+              "base": {
+                "meta": {},
+                "id": "rJg-goBfQm",
+                "reservedName": null,
+                "content": "{{rule_2_selection}} == \"1\" || (!{{rule_2_selection}} && ({{Employees_Other_Than_Spouse}} == {{No}}))",
+                "contentRaw": [
+                  "{{IMzqaGZVvS}}",
+                  "==",
+                  "1",
+                  " || (!",
+                  "{{IMzqaGZVvS}}",
+                  " && (",
+                  "{{SkFpiSzm7}}",
+                  "==",
+                  "{{HybWZxF1G}}",
+                  "))"
+                ],
+                "entitiesUsed": [
+                  "SkFpiSzm7",
+                  "HybWZxF1G"
+                ],
+                "entityTypeId": "S1pXhG9uZ"
+              },
+              "formulas": [],
+              "variables": [
+                {
+                  "meta": {
+                    "dataType": "Boolean"
+                  },
+                  "id": "HybWZxF1G",
+                  "reservedName": "No",
+                  "content": "false",
+                  "contentRaw": [
+                    "false"
+                  ],
+                  "entitiesUsed": [],
+                  "entityTypeId": "r1iNnz5_b",
+                  "result": {
+                    "value": false
+                  }
+                },
+                {
+                  "meta": {
+                    "dataType": "Boolean"
+                  },
+                  "id": "SkFpiSzm7",
+                  "reservedName": "Employees_Other_Than_Spouse",
+                  "content": null,
+                  "contentRaw": [],
+                  "entitiesUsed": [],
+                  "entityTypeId": "r1iNnz5_b",
+                  "result": {
+                    "value": "'Invalid Value'",
+                    "err": "Could not be evaluated. Check inputs."
+                  }
+                },
+                {
+                  "id": "IMzqaGZVvS",
+                  "reservedName": "rule_2_selection",
+                  "content": null,
+                  "contentRaw": [],
+                  "entitiesUsed": [],
+                  "entityTypeId": "r1iNnz5_b",
+                  "meta": {
+                    "dataType": "MultipleChoice",
+                    "values": [
+                      {
+                        "meta": {},
+                        "id": "rJg-goBfQm",
+                        "entityId": "JUrJg-goBfQm",
+                        "name": "No. There are no employees other than a spouse.",
+                        "reservedName": null,
+                        "description": null,
+                        "entitiesUsed": [
+                          "SkFpiSzm7",
+                          "HybWZxF1G"
+                        ],
+                        "call_node_id": null,
+                        "content": "{{Employees_Other_Than_Spouse}} == {{No}}",
+                        "contentRaw": [
+                          "{{SkFpiSzm7}}",
+                          "==",
+                          "{{HybWZxF1G}}"
+                        ],
+                        "status": {},
+                        "createdAt": "2018-07-10T15:04:09.416Z",
+                        "updatedAt": "2018-07-10T15:11:18.027Z",
+                        "ownerId": "JU",
+                        "entityTypeId": "S1pXhG9uZ",
+                        "entityType": {
+                          "displayName": "Condition",
+                          "displayNamePlural": "Conditions",
+                          "id": "S1pXhG9uZ",
+                          "name": "CONDITION"
+                        }
+                      },
+                      {
+                        "meta": {},
+                        "id": "rJgVgorz7X",
+                        "entityId": "JUrJgVgorz7X",
+                        "name": "Yes. There are employees other than a spouse.",
+                        "reservedName": null,
+                        "description": null,
+                        "entitiesUsed": [
+                          "SkFpiSzm7",
+                          "HkgY-lxFkG"
+                        ],
+                        "call_node_id": null,
+                        "content": "{{Employees_Other_Than_Spouse}} == {{Yes}}",
+                        "contentRaw": [
+                          "{{SkFpiSzm7}}",
+                          "==",
+                          "{{HkgY-lxFkG}}"
+                        ],
+                        "status": {},
+                        "createdAt": "2018-07-10T15:04:11.885Z",
+                        "updatedAt": "2018-07-10T15:56:26.980Z",
+                        "ownerId": "JU",
+                        "entityTypeId": "S1pXhG9uZ",
+                        "entityType": {
+                          "displayName": "Condition",
+                          "displayNamePlural": "Conditions",
+                          "id": "S1pXhG9uZ",
+                          "name": "CONDITION"
+                        }
+                      }
+                    ]
+                  },
+                  "result": {
+                    "value": "'Invalid Value'"
+                  }
+                }
+              ]
+            },
+            "children": [
+              {
+                "ruleSetCategoryId": "rkZs_JMyz",
+                "ruleSetId": "r1V8D1Esf",
+                "id": "Bkin2HGQX",
+                "nodeId": "JUBkin2HGQX",
+                "level1Id": "BJp7crM7Q",
+                "level2Id": "ry-xjrzmQ",
+                "level3Id": "Bkin2HGQX",
+                "parentId": "ry-xjrzmQ",
+                "siblingSequence": 1,
+                "sortOrder": "002002001",
+                "level": 3,
+                "ruleUpdatedAt": "2018-07-10T15:11:46.980Z",
+                "createdAt": "2018-07-10T15:11:46.969Z",
+                "updatedAt": "2018-07-10T15:11:46.996Z",
+                "entityId": "Byxj23SfX7",
+                "ownerId": "JU",
+                "owner": {
+                  "name": "Just Good Advice"
+                },
+                "entity": {
+                  "meta": {},
+                  "id": "Byxj23SfX7",
+                  "entityId": "JUByxj23SfX7",
+                  "name": "Open a Self-Employed 401(k)",
+                  "reservedName": null,
+                  "description": "A Self-Employed 401(k) generally has no initial setup fee nor annual maintenance fee and will allow you the maximum tax deferred retirement savings. You are allowed up to $18,500 (2018 limits) of salary deferrals ($24,500 if age 50 or older) and up to 25% of compensation from employer contributions  (maximum total not to exceed $55,000 for 2018). Talk to a financial advisor for more information.",
+                  "entitiesUsed": [],
+                  "call_node_id": null,
+                  "content": null,
+                  "contentRaw": [],
+                  "status": {},
+                  "createdAt": "2018-07-10T15:11:46.970Z",
+                  "updatedAt": "2018-07-10T16:45:25.476Z",
+                  "ownerId": "JU",
+                  "entityTypeId": "S1WeUcld9M",
+                  "entityType": {
+                    "displayName": "Advice",
+                    "displayNamePlural": "Advice",
+                    "id": "S1WeUcld9M",
+                    "name": "ADVICE"
+                  }
+                },
+                "advice": "Open a Self-Employed 401(k)",
+                "data": {
+                  "base": {
+                    "meta": {},
+                    "id": "Byxj23SfX7",
+                    "reservedName": null,
+                    "content": null,
+                    "contentRaw": [],
+                    "entitiesUsed": [],
+                    "entityTypeId": "S1WeUcld9M"
+                  },
+                  "formulas": [],
+                  "variables": []
+                }
+              }
+            ]
+          },
+          {
+            "ruleSetCategoryId": "rkZs_JMyz",
+            "ruleSetId": "r1V8D1Esf",
+            "id": "BJ4gjSGQQ",
+            "nodeId": "JUBJ4gjSGQQ",
+            "level1Id": "BJp7crM7Q",
+            "level2Id": "BJ4gjSGQQ",
+            "level3Id": null,
+            "parentId": "BJp7crM7Q",
+            "siblingSequence": 3,
+            "sortOrder": "002003",
+            "level": 2,
+            "ruleUpdatedAt": "2018-07-10T15:04:11.904Z",
+            "createdAt": "2018-07-10T15:04:11.881Z",
+            "updatedAt": "2018-07-10T15:04:11.928Z",
+            "entityId": "rJgVgorz7X",
+            "ownerId": "JU",
+            "owner": {
+              "name": "Just Good Advice"
+            },
+            "entity": {
+              "meta": {},
+              "id": "rJgVgorz7X",
+              "entityId": "JUrJgVgorz7X",
+              "name": "Yes. There are employees other than a spouse.",
+              "reservedName": null,
+              "description": null,
+              "entitiesUsed": [
+                "SkFpiSzm7",
+                "HkgY-lxFkG"
+              ],
+              "call_node_id": null,
+              "content": "{{Employees_Other_Than_Spouse}} == {{Yes}}",
+              "contentRaw": [
+                "{{SkFpiSzm7}}",
+                "==",
+                "{{HkgY-lxFkG}}"
+              ],
+              "status": {},
+              "createdAt": "2018-07-10T15:04:11.885Z",
+              "updatedAt": "2018-07-10T15:56:26.980Z",
+              "ownerId": "JU",
+              "entityTypeId": "S1pXhG9uZ",
+              "entityType": {
+                "displayName": "Condition",
+                "displayNamePlural": "Conditions",
+                "id": "S1pXhG9uZ",
+                "name": "CONDITION"
+              }
+            },
+            "evaluation": "{{rule_2_selection}} == \"2\" || (!{{rule_2_selection}} && ({{Employees_Other_Than_Spouse}} == {{Yes}}))",
+            "data": {
+              "base": {
+                "meta": {},
+                "id": "rJgVgorz7X",
+                "reservedName": null,
+                "content": "{{rule_2_selection}} == \"2\" || (!{{rule_2_selection}} && ({{Employees_Other_Than_Spouse}} == {{Yes}}))",
+                "contentRaw": [
+                  "{{IMzqaGZVvS}}",
+                  "==",
+                  "2",
+                  " || (!",
+                  "{{IMzqaGZVvS}}",
+                  " && (",
+                  "{{SkFpiSzm7}}",
+                  "==",
+                  "{{HkgY-lxFkG}}",
+                  "))"
+                ],
+                "entitiesUsed": [
+                  "SkFpiSzm7",
+                  "HkgY-lxFkG"
+                ],
+                "entityTypeId": "S1pXhG9uZ"
+              },
+              "formulas": [],
+              "variables": [
+                {
+                  "meta": {
+                    "dataType": "Boolean"
+                  },
+                  "id": "HkgY-lxFkG",
+                  "reservedName": "Yes",
+                  "content": "true",
+                  "contentRaw": [
+                    "true"
+                  ],
+                  "entitiesUsed": [],
+                  "entityTypeId": "r1iNnz5_b",
+                  "result": {
+                    "value": true
+                  }
+                },
+                {
+                  "meta": {
+                    "dataType": "Boolean"
+                  },
+                  "id": "SkFpiSzm7",
+                  "reservedName": "Employees_Other_Than_Spouse",
+                  "content": null,
+                  "contentRaw": [],
+                  "entitiesUsed": [],
+                  "entityTypeId": "r1iNnz5_b",
+                  "result": {
+                    "value": "'Invalid Value'",
+                    "err": "Could not be evaluated. Check inputs."
+                  }
+                },
+                {
+                  "id": "IMzqaGZVvS",
+                  "reservedName": "rule_2_selection",
+                  "content": null,
+                  "contentRaw": [],
+                  "entitiesUsed": [],
+                  "entityTypeId": "r1iNnz5_b",
+                  "meta": {
+                    "dataType": "MultipleChoice",
+                    "values": [
+                      {
+                        "meta": {},
+                        "id": "rJg-goBfQm",
+                        "entityId": "JUrJg-goBfQm",
+                        "name": "No. There are no employees other than a spouse.",
+                        "reservedName": null,
+                        "description": null,
+                        "entitiesUsed": [
+                          "SkFpiSzm7",
+                          "HybWZxF1G"
+                        ],
+                        "call_node_id": null,
+                        "content": "{{Employees_Other_Than_Spouse}} == {{No}}",
+                        "contentRaw": [
+                          "{{SkFpiSzm7}}",
+                          "==",
+                          "{{HybWZxF1G}}"
+                        ],
+                        "status": {},
+                        "createdAt": "2018-07-10T15:04:09.416Z",
+                        "updatedAt": "2018-07-10T15:11:18.027Z",
+                        "ownerId": "JU",
+                        "entityTypeId": "S1pXhG9uZ",
+                        "entityType": {
+                          "displayName": "Condition",
+                          "displayNamePlural": "Conditions",
+                          "id": "S1pXhG9uZ",
+                          "name": "CONDITION"
+                        }
+                      },
+                      {
+                        "meta": {},
+                        "id": "rJgVgorz7X",
+                        "entityId": "JUrJgVgorz7X",
+                        "name": "Yes. There are employees other than a spouse.",
+                        "reservedName": null,
+                        "description": null,
+                        "entitiesUsed": [
+                          "SkFpiSzm7",
+                          "HkgY-lxFkG"
+                        ],
+                        "call_node_id": null,
+                        "content": "{{Employees_Other_Than_Spouse}} == {{Yes}}",
+                        "contentRaw": [
+                          "{{SkFpiSzm7}}",
+                          "==",
+                          "{{HkgY-lxFkG}}"
+                        ],
+                        "status": {},
+                        "createdAt": "2018-07-10T15:04:11.885Z",
+                        "updatedAt": "2018-07-10T15:56:26.980Z",
+                        "ownerId": "JU",
+                        "entityTypeId": "S1pXhG9uZ",
+                        "entityType": {
+                          "displayName": "Condition",
+                          "displayNamePlural": "Conditions",
+                          "id": "S1pXhG9uZ",
+                          "name": "CONDITION"
+                        }
+                      }
+                    ]
+                  },
+                  "result": {
+                    "value": "'Invalid Value'"
+                  }
+                }
+              ]
+            },
+            "children": [
+              {
+                "ruleSetCategoryId": "rkZs_JMyz",
+                "ruleSetId": "r1V8D1Esf",
+                "id": "B18BDLzX7",
+                "nodeId": "JUB18BDLzX7",
+                "level1Id": "BJp7crM7Q",
+                "level2Id": "BJ4gjSGQQ",
+                "level3Id": "B18BDLzX7",
+                "parentId": "BJ4gjSGQQ",
+                "siblingSequence": 1,
+                "sortOrder": "002003001",
+                "level": 3,
+                "ruleUpdatedAt": "2018-07-10T15:56:45.619Z",
+                "createdAt": "2018-07-10T15:56:45.609Z",
+                "updatedAt": "2018-07-10T15:56:45.633Z",
+                "entityId": "H1l8BPUzQm",
+                "ownerId": "JU",
+                "owner": {
+                  "name": "Just Good Advice"
+                },
+                "entity": {
+                  "meta": {
+                    "isQuestion": "true"
+                  },
+                  "id": "H1l8BPUzQm",
+                  "entityId": "JUH1l8BPUzQm",
+                  "name": "Will the plan be entirely funded through employer contributions or will employees contribute to it as well?",
+                  "reservedName": "Contribution Source",
+                  "description": null,
+                  "entitiesUsed": [],
+                  "call_node_id": "Hy_BvLz7m",
+                  "content": null,
+                  "contentRaw": [],
+                  "status": {
+                    "isComplete": true
+                  },
+                  "createdAt": "2018-07-10T15:56:45.610Z",
+                  "updatedAt": "2018-07-10T15:56:47.997Z",
+                  "ownerId": "JU",
+                  "entityTypeId": "SyAx6zqOZ",
+                  "entityType": {
+                    "displayName": "Rule Call",
+                    "displayNamePlural": "Rule Calls",
+                    "id": "SyAx6zqOZ",
+                    "name": "EMBEDDED_RULE"
+                  }
+                },
+                "GOTO": "Hy_BvLz7m",
+                "data": {
+                  "base": {
+                    "meta": {
+                      "isQuestion": "true"
+                    },
+                    "id": "H1l8BPUzQm",
+                    "reservedName": "Contribution Source",
+                    "content": null,
+                    "contentRaw": [],
+                    "entitiesUsed": [],
+                    "entityTypeId": "SyAx6zqOZ"
+                  },
+                  "formulas": [],
+                  "variables": []
+                }
+              }
+            ]
+          }
+        ],
+        "questionRuleVariableName": "rule_2_selection",
+        "ruleVariables": [
+          {
+            "meta": {
+              "dataType": "Boolean"
+            },
+            "id": "SkFpiSzm7",
+            "reservedName": "Employees_Other_Than_Spouse",
+            "content": null,
+            "contentRaw": [],
+            "entitiesUsed": [],
+            "entityTypeId": "r1iNnz5_b",
+            "result": {
+              "value": "'Invalid Value'",
+              "err": "Could not be evaluated. Check inputs."
+            }
+          },
+          {
+            "meta": {
+              "dataType": "Boolean"
+            },
+            "id": "HybWZxF1G",
+            "reservedName": "No",
+            "content": "false",
+            "contentRaw": [
+              "false"
+            ],
+            "entitiesUsed": [],
+            "entityTypeId": "r1iNnz5_b",
+            "result": {
+              "value": false
+            }
+          },
+          {
+            "id": "IMzqaGZVvS",
+            "reservedName": "rule_2_selection",
+            "content": null,
+            "contentRaw": [],
+            "entitiesUsed": [],
+            "entityTypeId": "r1iNnz5_b",
+            "meta": {
+              "dataType": "MultipleChoice",
+              "values": [
+                {
+                  "meta": {},
+                  "id": "rJg-goBfQm",
+                  "entityId": "JUrJg-goBfQm",
+                  "name": "No. There are no employees other than a spouse.",
+                  "reservedName": null,
+                  "description": null,
+                  "entitiesUsed": [
+                    "SkFpiSzm7",
+                    "HybWZxF1G"
+                  ],
+                  "call_node_id": null,
+                  "content": "{{Employees_Other_Than_Spouse}} == {{No}}",
+                  "contentRaw": [
+                    "{{SkFpiSzm7}}",
+                    "==",
+                    "{{HybWZxF1G}}"
+                  ],
+                  "status": {},
+                  "createdAt": "2018-07-10T15:04:09.416Z",
+                  "updatedAt": "2018-07-10T15:11:18.027Z",
+                  "ownerId": "JU",
+                  "entityTypeId": "S1pXhG9uZ",
+                  "entityType": {
+                    "displayName": "Condition",
+                    "displayNamePlural": "Conditions",
+                    "id": "S1pXhG9uZ",
+                    "name": "CONDITION"
+                  }
+                },
+                {
+                  "meta": {},
+                  "id": "rJgVgorz7X",
+                  "entityId": "JUrJgVgorz7X",
+                  "name": "Yes. There are employees other than a spouse.",
+                  "reservedName": null,
+                  "description": null,
+                  "entitiesUsed": [
+                    "SkFpiSzm7",
+                    "HkgY-lxFkG"
+                  ],
+                  "call_node_id": null,
+                  "content": "{{Employees_Other_Than_Spouse}} == {{Yes}}",
+                  "contentRaw": [
+                    "{{SkFpiSzm7}}",
+                    "==",
+                    "{{HkgY-lxFkG}}"
+                  ],
+                  "status": {},
+                  "createdAt": "2018-07-10T15:04:11.885Z",
+                  "updatedAt": "2018-07-10T15:56:26.980Z",
+                  "ownerId": "JU",
+                  "entityTypeId": "S1pXhG9uZ",
+                  "entityType": {
+                    "displayName": "Condition",
+                    "displayNamePlural": "Conditions",
+                    "id": "S1pXhG9uZ",
+                    "name": "CONDITION"
+                  }
+                }
+              ]
+            },
+            "result": {
+              "value": "'Invalid Value'"
+            }
+          },
+          {
+            "meta": {
+              "dataType": "Boolean"
+            },
+            "id": "HkgY-lxFkG",
+            "reservedName": "Yes",
+            "content": "true",
+            "contentRaw": [
+              "true"
+            ],
+            "entitiesUsed": [],
+            "entityTypeId": "r1iNnz5_b",
+            "result": {
+              "value": true
+            }
+          }
+        ],
+        "ruleFormulas": []
+      },
+      "Hy_BvLz7m": {
+        "ruleSetCategoryId": "rkZs_JMyz",
+        "ruleSetId": "r1V8D1Esf",
+        "id": "Hy_BvLz7m",
+        "nodeId": "JUHy_BvLz7m",
+        "level1Id": "Hy_BvLz7m",
+        "level2Id": null,
+        "level3Id": null,
+        "parentId": "r1V8D1Esf",
+        "siblingSequence": 3,
+        "sortOrder": "003",
+        "level": 1,
+        "ruleUpdatedAt": "2018-07-10T19:28:26.267Z",
+        "createdAt": "2018-07-10T15:56:47.829Z",
+        "updatedAt": "2018-07-10T15:56:47.856Z",
+        "entityId": "HJdrDLGXm",
+        "ownerId": "JU",
+        "owner": {
+          "name": "Just Good Advice"
+        },
+        "entity": {
+          "meta": {
+            "isQuestion": "true"
+          },
+          "id": "HJdrDLGXm",
+          "entityId": "JUHJdrDLGXm",
+          "name": "Will the plan be entirely funded through employer contributions or will employees contribute to it as well?",
+          "reservedName": "Contribution Source",
+          "description": null,
+          "entitiesUsed": [],
+          "call_node_id": null,
+          "content": null,
+          "contentRaw": [],
+          "status": {
+            "isComplete": true
+          },
+          "createdAt": "2018-07-10T15:56:47.830Z",
+          "updatedAt": "2018-07-10T19:28:26.267Z",
+          "ownerId": "JU",
+          "entityTypeId": "SklaMoGcuW",
+          "entityType": {
+            "displayName": "Rule",
+            "displayNamePlural": "Rules",
+            "id": "SklaMoGcuW",
+            "name": "TOPIC"
+          }
+        },
+        "evaluation": null,
+        "children": [
+          {
+            "ruleSetCategoryId": "rkZs_JMyz",
+            "ruleSetId": "r1V8D1Esf",
+            "id": "HJgdHP8zX7",
+            "nodeId": "JUHJgdHP8zX7",
+            "level1Id": "Hy_BvLz7m",
+            "level2Id": "HJgdHP8zX7",
+            "level3Id": null,
+            "parentId": "Hy_BvLz7m",
+            "siblingSequence": 1,
+            "sortOrder": "003001",
+            "level": 2,
+            "ruleUpdatedAt": "2018-07-10T15:56:47.887Z",
+            "createdAt": "2018-07-10T15:56:47.885Z",
+            "updatedAt": "2018-07-10T15:56:47.900Z",
+            "entityId": "B18VTQid-",
+            "ownerId": "JU",
+            "owner": {
+              "name": "Just Good Advice"
+            },
+            "entity": {
+              "meta": {},
+              "id": "B18VTQid-",
+              "entityId": "JUB18VTQid-",
+              "name": "Always Run First",
+              "reservedName": "_Always Run First",
+              "description": "This condition is set to true and is used to run outcomes that always need to run BEFORE the tests.",
+              "entitiesUsed": null,
+              "call_node_id": null,
+              "content": null,
+              "contentRaw": [],
+              "status": {},
+              "createdAt": "2017-08-23T16:28:30.247Z",
+              "updatedAt": "2017-08-23T16:28:30.247Z",
+              "ownerId": "JU",
+              "entityTypeId": "rkBTcGidb",
+              "entityType": {
+                "displayName": "Condition (Always)",
+                "displayNamePlural": "Condition (Always)S",
+                "id": "rkBTcGidb",
+                "name": "CONDITION_ALWAYS"
+              }
+            },
+            "evaluation": null,
+            "data": {
+              "base": {
+                "meta": {},
+                "id": "B18VTQid-",
+                "reservedName": "_Always Run First",
+                "content": null,
+                "contentRaw": [],
+                "entitiesUsed": null,
+                "entityTypeId": "rkBTcGidb"
+              },
+              "formulas": [],
+              "variables": []
+            },
+            "children": [
+              {
+                "ruleSetCategoryId": "rkZs_JMyz",
+                "ruleSetId": "r1V8D1Esf",
+                "id": "eoRtvcq0YS",
+                "nodeId": "JUHy_BvLz7m",
+                "level1Id": "Hy_BvLz7m",
+                "level2Id": "HJgdHP8zX7",
+                "level3Id": "eoRtvcq0YS",
+                "parentId": "HJgdHP8zX7",
+                "siblingSequence": 1,
+                "sortOrder": "001001001",
+                "level": 3,
+                "ruleUpdatedAt": "2018-07-10T19:28:26.267Z",
+                "createdAt": "2018-07-10T15:56:47.829Z",
+                "updatedAt": "2018-07-10T15:56:47.856Z",
+                "entityId": "xqIT_ybqpo",
+                "ownerId": "JU",
+                "owner": {
+                  "name": "Just Good Advice"
+                },
+                "entity": {
+                  "meta": {
+                    "isQuestion": "true"
+                  },
+                  "id": "xqIT_ybqpo",
+                  "entityId": "JUHJdrDLGXm",
+                  "name": "Will the plan be entirely funded through employer contributions or will employees contribute to it as well?",
+                  "reservedName": "Contribution Source",
+                  "description": null,
+                  "entitiesUsed": [
+                    "LS8a6leZrU"
+                  ],
+                  "call_node_id": null,
+                  "content": "{{rule_3_selection}}",
+                  "contentRaw": [
+                    "{{LS8a6leZrU}}"
+                  ],
+                  "status": {
+                    "isComplete": true
+                  },
+                  "createdAt": "2018-07-10T15:56:47.830Z",
+                  "updatedAt": "2018-07-10T19:28:26.267Z",
+                  "ownerId": "JU",
+                  "entityTypeId": "HkgTgX7_f",
+                  "entityType": {
+                    "displayName": "Rule",
+                    "displayNamePlural": "Rules",
+                    "id": "SklaMoGcuW",
+                    "name": "INPUT_REQUEST"
+                  }
+                },
+                "question": "Will the plan be entirely funded through employer contributions or will employees contribute to it as well?",
+                "data": {
+                  "base": {
+                    "id": "xqIT_ybqpo",
+                    "reservedName": null,
+                    "content": "{{rule_3_selection}}",
+                    "contentRaw": [
+                      "{{LS8a6leZrU}}"
+                    ],
+                    "entitiesUsed": [
+                      "LS8a6leZrU"
+                    ],
+                    "entityTypeId": "HkgTgX7_f",
+                    "meta": {}
+                  },
+                  "formulas": [],
+                  "variables": [
+                    {
+                      "id": "LS8a6leZrU",
+                      "reservedName": "rule_3_selection",
+                      "content": null,
+                      "contentRaw": [],
+                      "entitiesUsed": [],
+                      "entityTypeId": "r1iNnz5_b",
+                      "meta": {
+                        "dataType": "MultipleChoice",
+                        "values": [
+                          {
+                            "meta": {},
+                            "id": "BJg6Yi8MX7",
+                            "entityId": "JUBJg6Yi8MX7",
+                            "name": "It will be funded solely by employer contributions.",
+                            "reservedName": null,
+                            "description": null,
+                            "entitiesUsed": [
+                              "r1nU6LfQ7"
+                            ],
+                            "call_node_id": null,
+                            "content": "{{Retirement_Plan_Funding_Source}} == \"Employer\"",
+                            "contentRaw": [
+                              "{{r1nU6LfQ7}}",
+                              "==",
+                              "\"Employer\""
+                            ],
+                            "status": {},
+                            "createdAt": "2018-07-10T16:15:01.311Z",
+                            "updatedAt": "2018-07-10T16:23:40.938Z",
+                            "ownerId": "JU",
+                            "entityTypeId": "S1pXhG9uZ",
+                            "entityType": {
+                              "displayName": "Condition",
+                              "displayNamePlural": "Conditions",
+                              "id": "S1pXhG9uZ",
+                              "name": "CONDITION"
+                            }
+                          },
+                          {
+                            "meta": {},
+                            "id": "Bylk5jLzmX",
+                            "entityId": "JUBylk5jLzmX",
+                            "name": "It will be primarily funded by employees and may include employer contributions.",
+                            "reservedName": null,
+                            "description": null,
+                            "entitiesUsed": [
+                              "r1nU6LfQ7"
+                            ],
+                            "call_node_id": null,
+                            "content": "{{Retirement_Plan_Funding_Source}} == \"Employee\"",
+                            "contentRaw": [
+                              "{{r1nU6LfQ7}}",
+                              "==",
+                              "\"Employee\""
+                            ],
+                            "status": {},
+                            "createdAt": "2018-07-10T16:15:03.312Z",
+                            "updatedAt": "2018-07-10T16:28:49.873Z",
+                            "ownerId": "JU",
+                            "entityTypeId": "S1pXhG9uZ",
+                            "entityType": {
+                              "displayName": "Condition",
+                              "displayNamePlural": "Conditions",
+                              "id": "S1pXhG9uZ",
+                              "name": "CONDITION"
+                            }
+                          }
+                        ]
+                      },
+                      "result": {
+                        "value": "'Invalid Value'"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "ruleSetCategoryId": "rkZs_JMyz",
+            "ruleSetId": "r1V8D1Esf",
+            "id": "rJaYiLzmm",
+            "nodeId": "JUrJaYiLzmm",
+            "level1Id": "Hy_BvLz7m",
+            "level2Id": "rJaYiLzmm",
+            "level3Id": null,
+            "parentId": "Hy_BvLz7m",
+            "siblingSequence": 2,
+            "sortOrder": "003002",
+            "level": 2,
+            "ruleUpdatedAt": "2018-07-10T16:15:01.329Z",
+            "createdAt": "2018-07-10T16:15:01.307Z",
+            "updatedAt": "2018-07-10T16:15:01.353Z",
+            "entityId": "BJg6Yi8MX7",
+            "ownerId": "JU",
+            "owner": {
+              "name": "Just Good Advice"
+            },
+            "entity": {
+              "meta": {},
+              "id": "BJg6Yi8MX7",
+              "entityId": "JUBJg6Yi8MX7",
+              "name": "It will be funded solely by employer contributions.",
+              "reservedName": null,
+              "description": null,
+              "entitiesUsed": [
+                "r1nU6LfQ7"
+              ],
+              "call_node_id": null,
+              "content": "{{Retirement_Plan_Funding_Source}} == \"Employer\"",
+              "contentRaw": [
+                "{{r1nU6LfQ7}}",
+                "==",
+                "\"Employer\""
+              ],
+              "status": {},
+              "createdAt": "2018-07-10T16:15:01.311Z",
+              "updatedAt": "2018-07-10T16:23:40.938Z",
+              "ownerId": "JU",
+              "entityTypeId": "S1pXhG9uZ",
+              "entityType": {
+                "displayName": "Condition",
+                "displayNamePlural": "Conditions",
+                "id": "S1pXhG9uZ",
+                "name": "CONDITION"
+              }
+            },
+            "evaluation": "{{rule_3_selection}} == \"1\" || (!{{rule_3_selection}} && ({{Retirement_Plan_Funding_Source}} == \"Employer\"))",
+            "data": {
+              "base": {
+                "meta": {},
+                "id": "BJg6Yi8MX7",
+                "reservedName": null,
+                "content": "{{rule_3_selection}} == \"1\" || (!{{rule_3_selection}} && ({{Retirement_Plan_Funding_Source}} == \"Employer\"))",
+                "contentRaw": [
+                  "{{LS8a6leZrU}}",
+                  "==",
+                  "1",
+                  " || (!",
+                  "{{LS8a6leZrU}}",
+                  " && (",
+                  "{{r1nU6LfQ7}}",
+                  "==",
+                  "\"Employer\"",
+                  "))"
+                ],
+                "entitiesUsed": [
+                  "r1nU6LfQ7"
+                ],
+                "entityTypeId": "S1pXhG9uZ"
+              },
+              "formulas": [],
+              "variables": [
+                {
+                  "meta": {
+                    "dataType": "String",
+                    "values": [
+                      "Employer",
+                      "Employee"
+                    ]
+                  },
+                  "id": "r1nU6LfQ7",
+                  "reservedName": "Retirement_Plan_Funding_Source",
+                  "content": null,
+                  "contentRaw": [],
+                  "entitiesUsed": [],
+                  "entityTypeId": "r1iNnz5_b",
+                  "result": {
+                    "value": "'Invalid Value'",
+                    "err": "Could not be evaluated. Check inputs."
+                  }
+                },
+                {
+                  "id": "LS8a6leZrU",
+                  "reservedName": "rule_3_selection",
+                  "content": null,
+                  "contentRaw": [],
+                  "entitiesUsed": [],
+                  "entityTypeId": "r1iNnz5_b",
+                  "meta": {
+                    "dataType": "MultipleChoice",
+                    "values": [
+                      {
+                        "meta": {},
+                        "id": "BJg6Yi8MX7",
+                        "entityId": "JUBJg6Yi8MX7",
+                        "name": "It will be funded solely by employer contributions.",
+                        "reservedName": null,
+                        "description": null,
+                        "entitiesUsed": [
+                          "r1nU6LfQ7"
+                        ],
+                        "call_node_id": null,
+                        "content": "{{Retirement_Plan_Funding_Source}} == \"Employer\"",
+                        "contentRaw": [
+                          "{{r1nU6LfQ7}}",
+                          "==",
+                          "\"Employer\""
+                        ],
+                        "status": {},
+                        "createdAt": "2018-07-10T16:15:01.311Z",
+                        "updatedAt": "2018-07-10T16:23:40.938Z",
+                        "ownerId": "JU",
+                        "entityTypeId": "S1pXhG9uZ",
+                        "entityType": {
+                          "displayName": "Condition",
+                          "displayNamePlural": "Conditions",
+                          "id": "S1pXhG9uZ",
+                          "name": "CONDITION"
+                        }
+                      },
+                      {
+                        "meta": {},
+                        "id": "Bylk5jLzmX",
+                        "entityId": "JUBylk5jLzmX",
+                        "name": "It will be primarily funded by employees and may include employer contributions.",
+                        "reservedName": null,
+                        "description": null,
+                        "entitiesUsed": [
+                          "r1nU6LfQ7"
+                        ],
+                        "call_node_id": null,
+                        "content": "{{Retirement_Plan_Funding_Source}} == \"Employee\"",
+                        "contentRaw": [
+                          "{{r1nU6LfQ7}}",
+                          "==",
+                          "\"Employee\""
+                        ],
+                        "status": {},
+                        "createdAt": "2018-07-10T16:15:03.312Z",
+                        "updatedAt": "2018-07-10T16:28:49.873Z",
+                        "ownerId": "JU",
+                        "entityTypeId": "S1pXhG9uZ",
+                        "entityType": {
+                          "displayName": "Condition",
+                          "displayNamePlural": "Conditions",
+                          "id": "S1pXhG9uZ",
+                          "name": "CONDITION"
+                        }
+                      }
+                    ]
+                  },
+                  "result": {
+                    "value": "'Invalid Value'"
+                  }
+                }
+              ]
+            },
+            "children": [
+              {
+                "ruleSetCategoryId": "rkZs_JMyz",
+                "ruleSetId": "r1V8D1Esf",
+                "id": "r1WBeDMm7",
+                "nodeId": "JUr1WBeDMm7",
+                "level1Id": "Hy_BvLz7m",
+                "level2Id": "rJaYiLzmm",
+                "level3Id": "r1WBeDMm7",
+                "parentId": "rJaYiLzmm",
+                "siblingSequence": 1,
+                "sortOrder": "003002001",
+                "level": 3,
+                "ruleUpdatedAt": "2018-07-10T16:35:04.983Z",
+                "createdAt": "2018-07-10T16:35:04.966Z",
+                "updatedAt": "2018-07-10T16:35:04.999Z",
+                "entityId": "SkeZHxDGXX",
+                "ownerId": "JU",
+                "owner": {
+                  "name": "Just Good Advice"
+                },
+                "entity": {
+                  "meta": {},
+                  "id": "SkeZHxDGXX",
+                  "entityId": "JUSkeZHxDGXX",
+                  "name": "Open a SEP IRA",
+                  "reservedName": null,
+                  "description": "A SEP (Simplified Employee Pension) IRA would be your best choice. It generally has no initial setup fee nor annual maintenance fee. The employer can contribute up to 25% of compensation up to a maximum of $55,000 annually (2018 limits). \n\nNOTE: Contributions are a percentage of compensation and MUST be an equal percentage across employees. For example, there is no way to contribute $10,000 to all employees' accounts if they have different compensation amounts.  You can set the contribution amount at 10% and all employees' accounts would receive 10% of their compensation. If this is not ideal for your situation, then we recommend going with a plan that allows employee contributions.",
+                  "entitiesUsed": [],
+                  "call_node_id": null,
+                  "content": null,
+                  "contentRaw": [],
+                  "status": {},
+                  "createdAt": "2018-07-10T16:35:04.969Z",
+                  "updatedAt": "2018-07-10T17:01:46.593Z",
+                  "ownerId": "JU",
+                  "entityTypeId": "S1WeUcld9M",
+                  "entityType": {
+                    "displayName": "Advice",
+                    "displayNamePlural": "Advice",
+                    "id": "S1WeUcld9M",
+                    "name": "ADVICE"
+                  }
+                },
+                "advice": "Open a SEP IRA",
+                "data": {
+                  "base": {
+                    "meta": {},
+                    "id": "SkeZHxDGXX",
+                    "reservedName": null,
+                    "content": null,
+                    "contentRaw": [],
+                    "entitiesUsed": [],
+                    "entityTypeId": "S1WeUcld9M"
+                  },
+                  "formulas": [],
+                  "variables": []
+                }
+              }
+            ]
+          },
+          {
+            "ruleSetCategoryId": "rkZs_JMyz",
+            "ruleSetId": "r1V8D1Esf",
+            "id": "B1JcsUM7Q",
+            "nodeId": "JUB1JcsUM7Q",
+            "level1Id": "Hy_BvLz7m",
+            "level2Id": "B1JcsUM7Q",
+            "level3Id": null,
+            "parentId": "Hy_BvLz7m",
+            "siblingSequence": 3,
+            "sortOrder": "003003",
+            "level": 2,
+            "ruleUpdatedAt": "2018-07-10T16:15:03.322Z",
+            "createdAt": "2018-07-10T16:15:03.310Z",
+            "updatedAt": "2018-07-10T16:15:03.338Z",
+            "entityId": "Bylk5jLzmX",
+            "ownerId": "JU",
+            "owner": {
+              "name": "Just Good Advice"
+            },
+            "entity": {
+              "meta": {},
+              "id": "Bylk5jLzmX",
+              "entityId": "JUBylk5jLzmX",
+              "name": "It will be primarily funded by employees and may include employer contributions.",
+              "reservedName": null,
+              "description": null,
+              "entitiesUsed": [
+                "r1nU6LfQ7"
+              ],
+              "call_node_id": null,
+              "content": "{{Retirement_Plan_Funding_Source}} == \"Employee\"",
+              "contentRaw": [
+                "{{r1nU6LfQ7}}",
+                "==",
+                "\"Employee\""
+              ],
+              "status": {},
+              "createdAt": "2018-07-10T16:15:03.312Z",
+              "updatedAt": "2018-07-10T16:28:49.873Z",
+              "ownerId": "JU",
+              "entityTypeId": "S1pXhG9uZ",
+              "entityType": {
+                "displayName": "Condition",
+                "displayNamePlural": "Conditions",
+                "id": "S1pXhG9uZ",
+                "name": "CONDITION"
+              }
+            },
+            "evaluation": "{{rule_3_selection}} == \"2\" || (!{{rule_3_selection}} && ({{Retirement_Plan_Funding_Source}} == \"Employee\"))",
+            "data": {
+              "base": {
+                "meta": {},
+                "id": "Bylk5jLzmX",
+                "reservedName": null,
+                "content": "{{rule_3_selection}} == \"2\" || (!{{rule_3_selection}} && ({{Retirement_Plan_Funding_Source}} == \"Employee\"))",
+                "contentRaw": [
+                  "{{LS8a6leZrU}}",
+                  "==",
+                  "2",
+                  " || (!",
+                  "{{LS8a6leZrU}}",
+                  " && (",
+                  "{{r1nU6LfQ7}}",
+                  "==",
+                  "\"Employee\"",
+                  "))"
+                ],
+                "entitiesUsed": [
+                  "r1nU6LfQ7"
+                ],
+                "entityTypeId": "S1pXhG9uZ"
+              },
+              "formulas": [],
+              "variables": [
+                {
+                  "meta": {
+                    "dataType": "String",
+                    "values": [
+                      "Employer",
+                      "Employee"
+                    ]
+                  },
+                  "id": "r1nU6LfQ7",
+                  "reservedName": "Retirement_Plan_Funding_Source",
+                  "content": null,
+                  "contentRaw": [],
+                  "entitiesUsed": [],
+                  "entityTypeId": "r1iNnz5_b",
+                  "result": {
+                    "value": "'Invalid Value'",
+                    "err": "Could not be evaluated. Check inputs."
+                  }
+                },
+                {
+                  "id": "LS8a6leZrU",
+                  "reservedName": "rule_3_selection",
+                  "content": null,
+                  "contentRaw": [],
+                  "entitiesUsed": [],
+                  "entityTypeId": "r1iNnz5_b",
+                  "meta": {
+                    "dataType": "MultipleChoice",
+                    "values": [
+                      {
+                        "meta": {},
+                        "id": "BJg6Yi8MX7",
+                        "entityId": "JUBJg6Yi8MX7",
+                        "name": "It will be funded solely by employer contributions.",
+                        "reservedName": null,
+                        "description": null,
+                        "entitiesUsed": [
+                          "r1nU6LfQ7"
+                        ],
+                        "call_node_id": null,
+                        "content": "{{Retirement_Plan_Funding_Source}} == \"Employer\"",
+                        "contentRaw": [
+                          "{{r1nU6LfQ7}}",
+                          "==",
+                          "\"Employer\""
+                        ],
+                        "status": {},
+                        "createdAt": "2018-07-10T16:15:01.311Z",
+                        "updatedAt": "2018-07-10T16:23:40.938Z",
+                        "ownerId": "JU",
+                        "entityTypeId": "S1pXhG9uZ",
+                        "entityType": {
+                          "displayName": "Condition",
+                          "displayNamePlural": "Conditions",
+                          "id": "S1pXhG9uZ",
+                          "name": "CONDITION"
+                        }
+                      },
+                      {
+                        "meta": {},
+                        "id": "Bylk5jLzmX",
+                        "entityId": "JUBylk5jLzmX",
+                        "name": "It will be primarily funded by employees and may include employer contributions.",
+                        "reservedName": null,
+                        "description": null,
+                        "entitiesUsed": [
+                          "r1nU6LfQ7"
+                        ],
+                        "call_node_id": null,
+                        "content": "{{Retirement_Plan_Funding_Source}} == \"Employee\"",
+                        "contentRaw": [
+                          "{{r1nU6LfQ7}}",
+                          "==",
+                          "\"Employee\""
+                        ],
+                        "status": {},
+                        "createdAt": "2018-07-10T16:15:03.312Z",
+                        "updatedAt": "2018-07-10T16:28:49.873Z",
+                        "ownerId": "JU",
+                        "entityTypeId": "S1pXhG9uZ",
+                        "entityType": {
+                          "displayName": "Condition",
+                          "displayNamePlural": "Conditions",
+                          "id": "S1pXhG9uZ",
+                          "name": "CONDITION"
+                        }
+                      }
+                    ]
+                  },
+                  "result": {
+                    "value": "'Invalid Value'"
+                  }
+                }
+              ]
+            },
+            "children": [
+              {
+                "ruleSetCategoryId": "rkZs_JMyz",
+                "ruleSetId": "r1V8D1Esf",
+                "id": "BJ-8uYGQQ",
+                "nodeId": "JUBJ-8uYGQQ",
+                "level1Id": "Hy_BvLz7m",
+                "level2Id": "B1JcsUM7Q",
+                "level3Id": "BJ-8uYGQQ",
+                "parentId": "B1JcsUM7Q",
+                "siblingSequence": 1,
+                "sortOrder": "003003001",
+                "level": 3,
+                "ruleUpdatedAt": "2018-07-10T19:26:01.201Z",
+                "createdAt": "2018-07-10T19:26:01.143Z",
+                "updatedAt": "2018-07-10T19:26:01.245Z",
+                "entityId": "H1xbLOtzmm",
+                "ownerId": "JU",
+                "owner": {
+                  "name": "Just Good Advice"
+                },
+                "entity": {
+                  "meta": {
+                    "isQuestion": true
+                  },
+                  "id": "H1xbLOtzmm",
+                  "entityId": "JUH1xbLOtzmm",
+                  "name": "Which is more important: Low cost of plan or Maximum contribution amount?",
+                  "reservedName": "Cost vs Contributions",
+                  "description": null,
+                  "entitiesUsed": [],
+                  "call_node_id": "B1VLuFGXQ",
+                  "content": null,
+                  "contentRaw": [],
+                  "status": {
+                    "isComplete": true
+                  },
+                  "createdAt": "2018-07-10T19:26:01.150Z",
+                  "updatedAt": "2018-07-10T19:26:04.280Z",
+                  "ownerId": "JU",
+                  "entityTypeId": "SyAx6zqOZ",
+                  "entityType": {
+                    "displayName": "Rule Call",
+                    "displayNamePlural": "Rule Calls",
+                    "id": "SyAx6zqOZ",
+                    "name": "EMBEDDED_RULE"
+                  }
+                },
+                "GOTO": "B1VLuFGXQ",
+                "data": {
+                  "base": {
+                    "meta": {
+                      "isQuestion": true
+                    },
+                    "id": "H1xbLOtzmm",
+                    "reservedName": "Cost vs Contributions",
+                    "content": null,
+                    "contentRaw": [],
+                    "entitiesUsed": [],
+                    "entityTypeId": "SyAx6zqOZ"
+                  },
+                  "formulas": [],
+                  "variables": []
+                }
+              }
+            ]
+          }
+        ],
+        "questionRuleVariableName": "rule_3_selection",
+        "ruleVariables": [
+          {
+            "meta": {
+              "dataType": "String",
+              "values": [
+                "Employer",
+                "Employee"
+              ]
+            },
+            "id": "r1nU6LfQ7",
+            "reservedName": "Retirement_Plan_Funding_Source",
+            "content": null,
+            "contentRaw": [],
+            "entitiesUsed": [],
+            "entityTypeId": "r1iNnz5_b",
+            "result": {
+              "value": "'Invalid Value'",
+              "err": "Could not be evaluated. Check inputs."
+            }
+          },
+          {
+            "id": "LS8a6leZrU",
+            "reservedName": "rule_3_selection",
+            "content": null,
+            "contentRaw": [],
+            "entitiesUsed": [],
+            "entityTypeId": "r1iNnz5_b",
+            "meta": {
+              "dataType": "MultipleChoice",
+              "values": [
+                {
+                  "meta": {},
+                  "id": "BJg6Yi8MX7",
+                  "entityId": "JUBJg6Yi8MX7",
+                  "name": "It will be funded solely by employer contributions.",
+                  "reservedName": null,
+                  "description": null,
+                  "entitiesUsed": [
+                    "r1nU6LfQ7"
+                  ],
+                  "call_node_id": null,
+                  "content": "{{Retirement_Plan_Funding_Source}} == \"Employer\"",
+                  "contentRaw": [
+                    "{{r1nU6LfQ7}}",
+                    "==",
+                    "\"Employer\""
+                  ],
+                  "status": {},
+                  "createdAt": "2018-07-10T16:15:01.311Z",
+                  "updatedAt": "2018-07-10T16:23:40.938Z",
+                  "ownerId": "JU",
+                  "entityTypeId": "S1pXhG9uZ",
+                  "entityType": {
+                    "displayName": "Condition",
+                    "displayNamePlural": "Conditions",
+                    "id": "S1pXhG9uZ",
+                    "name": "CONDITION"
+                  }
+                },
+                {
+                  "meta": {},
+                  "id": "Bylk5jLzmX",
+                  "entityId": "JUBylk5jLzmX",
+                  "name": "It will be primarily funded by employees and may include employer contributions.",
+                  "reservedName": null,
+                  "description": null,
+                  "entitiesUsed": [
+                    "r1nU6LfQ7"
+                  ],
+                  "call_node_id": null,
+                  "content": "{{Retirement_Plan_Funding_Source}} == \"Employee\"",
+                  "contentRaw": [
+                    "{{r1nU6LfQ7}}",
+                    "==",
+                    "\"Employee\""
+                  ],
+                  "status": {},
+                  "createdAt": "2018-07-10T16:15:03.312Z",
+                  "updatedAt": "2018-07-10T16:28:49.873Z",
+                  "ownerId": "JU",
+                  "entityTypeId": "S1pXhG9uZ",
+                  "entityType": {
+                    "displayName": "Condition",
+                    "displayNamePlural": "Conditions",
+                    "id": "S1pXhG9uZ",
+                    "name": "CONDITION"
+                  }
+                }
+              ]
+            },
+            "result": {
+              "value": "'Invalid Value'"
+            }
+          }
+        ],
+        "ruleFormulas": []
+      },
+      "B1VLuFGXQ": {
+        "ruleSetCategoryId": "rkZs_JMyz",
+        "ruleSetId": "r1V8D1Esf",
+        "id": "B1VLuFGXQ",
+        "nodeId": "JUB1VLuFGXQ",
+        "level1Id": "B1VLuFGXQ",
+        "level2Id": null,
+        "level3Id": null,
+        "parentId": "r1V8D1Esf",
+        "siblingSequence": 4,
+        "sortOrder": "004",
+        "level": 1,
+        "ruleUpdatedAt": "2018-07-10T19:40:16.855Z",
+        "createdAt": "2018-07-10T19:26:03.909Z",
+        "updatedAt": "2018-07-10T19:26:03.968Z",
+        "entityId": "B1N8uFfX7",
+        "ownerId": "JU",
+        "owner": {
+          "name": "Just Good Advice"
+        },
+        "entity": {
+          "meta": {
+            "isQuestion": true
+          },
+          "id": "B1N8uFfX7",
+          "entityId": "JUB1N8uFfX7",
+          "name": "Which is more important: Low cost of plan or Maximum contribution amount?",
+          "reservedName": "Cost vs Contributions",
+          "description": null,
+          "entitiesUsed": [],
+          "call_node_id": null,
+          "content": null,
+          "contentRaw": [],
+          "status": {
+            "isComplete": true
+          },
+          "createdAt": "2018-07-10T19:26:03.912Z",
+          "updatedAt": "2018-07-10T19:30:08.906Z",
+          "ownerId": "JU",
+          "entityTypeId": "SklaMoGcuW",
+          "entityType": {
+            "displayName": "Rule",
+            "displayNamePlural": "Rules",
+            "id": "SklaMoGcuW",
+            "name": "TOPIC"
+          }
+        },
+        "evaluation": null,
+        "children": [
+          {
+            "ruleSetCategoryId": "rkZs_JMyz",
+            "ruleSetId": "r1V8D1Esf",
+            "id": "r1x4LdYfmm",
+            "nodeId": "JUr1x4LdYfmm",
+            "level1Id": "B1VLuFGXQ",
+            "level2Id": "r1x4LdYfmm",
+            "level3Id": null,
+            "parentId": "B1VLuFGXQ",
+            "siblingSequence": 1,
+            "sortOrder": "004001",
+            "level": 2,
+            "ruleUpdatedAt": "2018-07-10T19:26:04.066Z",
+            "createdAt": "2018-07-10T19:26:04.057Z",
+            "updatedAt": "2018-07-10T19:26:04.092Z",
+            "entityId": "B18VTQid-",
+            "ownerId": "JU",
+            "owner": {
+              "name": "Just Good Advice"
+            },
+            "entity": {
+              "meta": {},
+              "id": "B18VTQid-",
+              "entityId": "JUB18VTQid-",
+              "name": "Always Run First",
+              "reservedName": "_Always Run First",
+              "description": "This condition is set to true and is used to run outcomes that always need to run BEFORE the tests.",
+              "entitiesUsed": null,
+              "call_node_id": null,
+              "content": null,
+              "contentRaw": [],
+              "status": {},
+              "createdAt": "2017-08-23T16:28:30.247Z",
+              "updatedAt": "2017-08-23T16:28:30.247Z",
+              "ownerId": "JU",
+              "entityTypeId": "rkBTcGidb",
+              "entityType": {
+                "displayName": "Condition (Always)",
+                "displayNamePlural": "Condition (Always)S",
+                "id": "rkBTcGidb",
+                "name": "CONDITION_ALWAYS"
+              }
+            },
+            "evaluation": null,
+            "data": {
+              "base": {
+                "meta": {},
+                "id": "B18VTQid-",
+                "reservedName": "_Always Run First",
+                "content": null,
+                "contentRaw": [],
+                "entitiesUsed": null,
+                "entityTypeId": "rkBTcGidb"
+              },
+              "formulas": [],
+              "variables": []
+            },
+            "children": [
+              {
+                "ruleSetCategoryId": "rkZs_JMyz",
+                "ruleSetId": "r1V8D1Esf",
+                "id": "egZg1ScOP6",
+                "nodeId": "JUB1VLuFGXQ",
+                "level1Id": "B1VLuFGXQ",
+                "level2Id": "r1x4LdYfmm",
+                "level3Id": "egZg1ScOP6",
+                "parentId": "r1x4LdYfmm",
+                "siblingSequence": 1,
+                "sortOrder": "001001001",
+                "level": 3,
+                "ruleUpdatedAt": "2018-07-10T19:40:16.855Z",
+                "createdAt": "2018-07-10T19:26:03.909Z",
+                "updatedAt": "2018-07-10T19:26:03.968Z",
+                "entityId": "Y-tV1-vitS",
+                "ownerId": "JU",
+                "owner": {
+                  "name": "Just Good Advice"
+                },
+                "entity": {
+                  "meta": {
+                    "isQuestion": true
+                  },
+                  "id": "Y-tV1-vitS",
+                  "entityId": "JUB1N8uFfX7",
+                  "name": "Which is more important: Low cost of plan or Maximum contribution amount?",
+                  "reservedName": "Cost vs Contributions",
+                  "description": null,
+                  "entitiesUsed": [
+                    "koPgvmiC0x"
+                  ],
+                  "call_node_id": null,
+                  "content": "{{rule_4_selection}}",
+                  "contentRaw": [
+                    "{{koPgvmiC0x}}"
+                  ],
+                  "status": {
+                    "isComplete": true
+                  },
+                  "createdAt": "2018-07-10T19:26:03.912Z",
+                  "updatedAt": "2018-07-10T19:30:08.906Z",
+                  "ownerId": "JU",
+                  "entityTypeId": "HkgTgX7_f",
+                  "entityType": {
+                    "displayName": "Rule",
+                    "displayNamePlural": "Rules",
+                    "id": "SklaMoGcuW",
+                    "name": "INPUT_REQUEST"
+                  }
+                },
+                "question": "Which is more important: Low cost of plan or Maximum contribution amount?",
+                "data": {
+                  "base": {
+                    "id": "Y-tV1-vitS",
+                    "reservedName": null,
+                    "content": "{{rule_4_selection}}",
+                    "contentRaw": [
+                      "{{koPgvmiC0x}}"
+                    ],
+                    "entitiesUsed": [
+                      "koPgvmiC0x"
+                    ],
+                    "entityTypeId": "HkgTgX7_f",
+                    "meta": {}
+                  },
+                  "formulas": [],
+                  "variables": [
+                    {
+                      "id": "koPgvmiC0x",
+                      "reservedName": "rule_4_selection",
+                      "content": null,
+                      "contentRaw": [],
+                      "entitiesUsed": [],
+                      "entityTypeId": "r1iNnz5_b",
+                      "meta": {
+                        "dataType": "MultipleChoice",
+                        "values": [
+                          {
+                            "meta": {},
+                            "id": "rJgOlYKz7m",
+                            "entityId": "JUrJgOlYKz7m",
+                            "name": "Having a low cost plan is most important.",
+                            "reservedName": null,
+                            "description": null,
+                            "entitiesUsed": [],
+                            "call_node_id": null,
+                            "content": null,
+                            "contentRaw": [],
+                            "status": {},
+                            "createdAt": "2018-07-10T19:28:48.210Z",
+                            "updatedAt": "2018-07-10T19:29:26.891Z",
+                            "ownerId": "JU",
+                            "entityTypeId": "S1pXhG9uZ",
+                            "entityType": {
+                              "displayName": "Condition",
+                              "displayNamePlural": "Conditions",
+                              "id": "S1pXhG9uZ",
+                              "name": "CONDITION"
+                            }
+                          },
+                          {
+                            "meta": {},
+                            "id": "HkeoxtFGm7",
+                            "entityId": "JUHkeoxtFGm7",
+                            "name": "Maximizing annual contributions is most important.",
+                            "reservedName": null,
+                            "description": null,
+                            "entitiesUsed": [],
+                            "call_node_id": null,
+                            "content": null,
+                            "contentRaw": [],
+                            "status": {},
+                            "createdAt": "2018-07-10T19:28:50.860Z",
+                            "updatedAt": "2018-07-10T19:30:05.063Z",
+                            "ownerId": "JU",
+                            "entityTypeId": "S1pXhG9uZ",
+                            "entityType": {
+                              "displayName": "Condition",
+                              "displayNamePlural": "Conditions",
+                              "id": "S1pXhG9uZ",
+                              "name": "CONDITION"
+                            }
+                          }
+                        ]
+                      },
+                      "result": {
+                        "value": "'Invalid Value'"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "ruleSetCategoryId": "rkZs_JMyz",
+            "ruleSetId": "r1V8D1Esf",
+            "id": "r1uxYKzmQ",
+            "nodeId": "JUr1uxYKzmQ",
+            "level1Id": "B1VLuFGXQ",
+            "level2Id": "r1uxYKzmQ",
+            "level3Id": null,
+            "parentId": "B1VLuFGXQ",
+            "siblingSequence": 2,
+            "sortOrder": "004002",
+            "level": 2,
+            "ruleUpdatedAt": "2018-07-10T19:28:48.218Z",
+            "createdAt": "2018-07-10T19:28:48.208Z",
+            "updatedAt": "2018-07-10T19:28:48.234Z",
+            "entityId": "rJgOlYKz7m",
+            "ownerId": "JU",
+            "owner": {
+              "name": "Just Good Advice"
+            },
+            "entity": {
+              "meta": {},
+              "id": "rJgOlYKz7m",
+              "entityId": "JUrJgOlYKz7m",
+              "name": "Having a low cost plan is most important.",
+              "reservedName": null,
+              "description": null,
+              "entitiesUsed": [],
+              "call_node_id": null,
+              "content": null,
+              "contentRaw": [],
+              "status": {},
+              "createdAt": "2018-07-10T19:28:48.210Z",
+              "updatedAt": "2018-07-10T19:29:26.891Z",
+              "ownerId": "JU",
+              "entityTypeId": "S1pXhG9uZ",
+              "entityType": {
+                "displayName": "Condition",
+                "displayNamePlural": "Conditions",
+                "id": "S1pXhG9uZ",
+                "name": "CONDITION"
+              }
+            },
+            "evaluation": "{{rule_4_selection}} == \"1\"",
+            "data": {
+              "base": {
+                "meta": {},
+                "id": "rJgOlYKz7m",
+                "reservedName": null,
+                "content": "{{rule_4_selection}} == \"1\"",
+                "contentRaw": [
+                  "{{koPgvmiC0x}}",
+                  "==",
+                  "1"
+                ],
+                "entitiesUsed": [],
+                "entityTypeId": "S1pXhG9uZ"
+              },
+              "formulas": [],
+              "variables": [
+                {
+                  "id": "koPgvmiC0x",
+                  "reservedName": "rule_4_selection",
+                  "content": null,
+                  "contentRaw": [],
+                  "entitiesUsed": [],
+                  "entityTypeId": "r1iNnz5_b",
+                  "meta": {
+                    "dataType": "MultipleChoice",
+                    "values": [
+                      {
+                        "meta": {},
+                        "id": "rJgOlYKz7m",
+                        "entityId": "JUrJgOlYKz7m",
+                        "name": "Having a low cost plan is most important.",
+                        "reservedName": null,
+                        "description": null,
+                        "entitiesUsed": [],
+                        "call_node_id": null,
+                        "content": null,
+                        "contentRaw": [],
+                        "status": {},
+                        "createdAt": "2018-07-10T19:28:48.210Z",
+                        "updatedAt": "2018-07-10T19:29:26.891Z",
+                        "ownerId": "JU",
+                        "entityTypeId": "S1pXhG9uZ",
+                        "entityType": {
+                          "displayName": "Condition",
+                          "displayNamePlural": "Conditions",
+                          "id": "S1pXhG9uZ",
+                          "name": "CONDITION"
+                        }
+                      },
+                      {
+                        "meta": {},
+                        "id": "HkeoxtFGm7",
+                        "entityId": "JUHkeoxtFGm7",
+                        "name": "Maximizing annual contributions is most important.",
+                        "reservedName": null,
+                        "description": null,
+                        "entitiesUsed": [],
+                        "call_node_id": null,
+                        "content": null,
+                        "contentRaw": [],
+                        "status": {},
+                        "createdAt": "2018-07-10T19:28:50.860Z",
+                        "updatedAt": "2018-07-10T19:30:05.063Z",
+                        "ownerId": "JU",
+                        "entityTypeId": "S1pXhG9uZ",
+                        "entityType": {
+                          "displayName": "Condition",
+                          "displayNamePlural": "Conditions",
+                          "id": "S1pXhG9uZ",
+                          "name": "CONDITION"
+                        }
+                      }
+                    ]
+                  },
+                  "result": {
+                    "value": "'Invalid Value'"
+                  }
+                }
+              ]
+            },
+            "children": [
+              {
+                "ruleSetCategoryId": "rkZs_JMyz",
+                "ruleSetId": "r1V8D1Esf",
+                "id": "SyVQFtfQX",
+                "nodeId": "JUSyVQFtfQX",
+                "level1Id": "B1VLuFGXQ",
+                "level2Id": "r1uxYKzmQ",
+                "level3Id": "SyVQFtfQX",
+                "parentId": "r1uxYKzmQ",
+                "siblingSequence": 1,
+                "sortOrder": "004002001",
+                "level": 3,
+                "ruleUpdatedAt": "2018-07-10T19:29:31.617Z",
+                "createdAt": "2018-07-10T19:29:31.607Z",
+                "updatedAt": "2018-07-10T19:29:31.634Z",
+                "entityId": "HklE7tFfQm",
+                "ownerId": "JU",
+                "owner": {
+                  "name": "Just Good Advice"
+                },
+                "entity": {
+                  "meta": {},
+                  "id": "HklE7tFfQm",
+                  "entityId": "JUHklE7tFfQm",
+                  "name": "Open a SIMPLE IRA",
+                  "reservedName": null,
+                  "description": "While the setup fees and annual maintenance fees tend to be lower than a company sponsored 401(k), a SIMPLE (Savings Incentive Match Plan for Employees) IRA has lower annual contribution limits. \n\nEmployees can contribute up to $12,500 annually vs $18,500 in a 401(k).\n\nEmployers may make matching contributions up to 3% of compensation or a non-elective contribution (doesn't require employee contribution) of 2% up to $5,500.\n\nNote: Limits shown are are 2018 IRS limits.",
+                  "entitiesUsed": [],
+                  "call_node_id": null,
+                  "content": null,
+                  "contentRaw": [],
+                  "status": {},
+                  "createdAt": "2018-07-10T19:29:31.608Z",
+                  "updatedAt": "2018-07-10T19:40:00.028Z",
+                  "ownerId": "JU",
+                  "entityTypeId": "S1WeUcld9M",
+                  "entityType": {
+                    "displayName": "Advice",
+                    "displayNamePlural": "Advice",
+                    "id": "S1WeUcld9M",
+                    "name": "ADVICE"
+                  }
+                },
+                "advice": "Open a SIMPLE IRA",
+                "data": {
+                  "base": {
+                    "meta": {},
+                    "id": "HklE7tFfQm",
+                    "reservedName": null,
+                    "content": null,
+                    "contentRaw": [],
+                    "entitiesUsed": [],
+                    "entityTypeId": "S1WeUcld9M"
+                  },
+                  "formulas": [],
+                  "variables": []
+                }
+              }
+            ]
+          },
+          {
+            "ruleSetCategoryId": "rkZs_JMyz",
+            "ruleSetId": "r1V8D1Esf",
+            "id": "B1ilKKfmQ",
+            "nodeId": "JUB1ilKKfmQ",
+            "level1Id": "B1VLuFGXQ",
+            "level2Id": "B1ilKKfmQ",
+            "level3Id": null,
+            "parentId": "B1VLuFGXQ",
+            "siblingSequence": 3,
+            "sortOrder": "004003",
+            "level": 2,
+            "ruleUpdatedAt": "2018-07-10T19:28:50.868Z",
+            "createdAt": "2018-07-10T19:28:50.859Z",
+            "updatedAt": "2018-07-10T19:28:50.881Z",
+            "entityId": "HkeoxtFGm7",
+            "ownerId": "JU",
+            "owner": {
+              "name": "Just Good Advice"
+            },
+            "entity": {
+              "meta": {},
+              "id": "HkeoxtFGm7",
+              "entityId": "JUHkeoxtFGm7",
+              "name": "Maximizing annual contributions is most important.",
+              "reservedName": null,
+              "description": null,
+              "entitiesUsed": [],
+              "call_node_id": null,
+              "content": null,
+              "contentRaw": [],
+              "status": {},
+              "createdAt": "2018-07-10T19:28:50.860Z",
+              "updatedAt": "2018-07-10T19:30:05.063Z",
+              "ownerId": "JU",
+              "entityTypeId": "S1pXhG9uZ",
+              "entityType": {
+                "displayName": "Condition",
+                "displayNamePlural": "Conditions",
+                "id": "S1pXhG9uZ",
+                "name": "CONDITION"
+              }
+            },
+            "evaluation": "{{rule_4_selection}} == \"2\"",
+            "data": {
+              "base": {
+                "meta": {},
+                "id": "HkeoxtFGm7",
+                "reservedName": null,
+                "content": "{{rule_4_selection}} == \"2\"",
+                "contentRaw": [
+                  "{{koPgvmiC0x}}",
+                  "==",
+                  "2"
+                ],
+                "entitiesUsed": [],
+                "entityTypeId": "S1pXhG9uZ"
+              },
+              "formulas": [],
+              "variables": [
+                {
+                  "id": "koPgvmiC0x",
+                  "reservedName": "rule_4_selection",
+                  "content": null,
+                  "contentRaw": [],
+                  "entitiesUsed": [],
+                  "entityTypeId": "r1iNnz5_b",
+                  "meta": {
+                    "dataType": "MultipleChoice",
+                    "values": [
+                      {
+                        "meta": {},
+                        "id": "rJgOlYKz7m",
+                        "entityId": "JUrJgOlYKz7m",
+                        "name": "Having a low cost plan is most important.",
+                        "reservedName": null,
+                        "description": null,
+                        "entitiesUsed": [],
+                        "call_node_id": null,
+                        "content": null,
+                        "contentRaw": [],
+                        "status": {},
+                        "createdAt": "2018-07-10T19:28:48.210Z",
+                        "updatedAt": "2018-07-10T19:29:26.891Z",
+                        "ownerId": "JU",
+                        "entityTypeId": "S1pXhG9uZ",
+                        "entityType": {
+                          "displayName": "Condition",
+                          "displayNamePlural": "Conditions",
+                          "id": "S1pXhG9uZ",
+                          "name": "CONDITION"
+                        }
+                      },
+                      {
+                        "meta": {},
+                        "id": "HkeoxtFGm7",
+                        "entityId": "JUHkeoxtFGm7",
+                        "name": "Maximizing annual contributions is most important.",
+                        "reservedName": null,
+                        "description": null,
+                        "entitiesUsed": [],
+                        "call_node_id": null,
+                        "content": null,
+                        "contentRaw": [],
+                        "status": {},
+                        "createdAt": "2018-07-10T19:28:50.860Z",
+                        "updatedAt": "2018-07-10T19:30:05.063Z",
+                        "ownerId": "JU",
+                        "entityTypeId": "S1pXhG9uZ",
+                        "entityType": {
+                          "displayName": "Condition",
+                          "displayNamePlural": "Conditions",
+                          "id": "S1pXhG9uZ",
+                          "name": "CONDITION"
+                        }
+                      }
+                    ]
+                  },
+                  "result": {
+                    "value": "'Invalid Value'"
+                  }
+                }
+              ]
+            },
+            "children": [
+              {
+                "ruleSetCategoryId": "rkZs_JMyz",
+                "ruleSetId": "r1V8D1Esf",
+                "id": "SktSKKGQ7",
+                "nodeId": "JUSktSKKGQ7",
+                "level1Id": "B1VLuFGXQ",
+                "level2Id": "B1ilKKfmQ",
+                "level3Id": "SktSKKGQ7",
+                "parentId": "B1ilKKfmQ",
+                "siblingSequence": 1,
+                "sortOrder": "004003001",
+                "level": 3,
+                "ruleUpdatedAt": "2018-07-10T19:30:08.725Z",
+                "createdAt": "2018-07-10T19:30:08.708Z",
+                "updatedAt": "2018-07-10T19:30:08.739Z",
+                "entityId": "r1eKBtFf7X",
+                "ownerId": "JU",
+                "owner": {
+                  "name": "Just Good Advice"
+                },
+                "entity": {
+                  "meta": {},
+                  "id": "r1eKBtFf7X",
+                  "entityId": "JUr1eKBtFf7X",
+                  "name": "Open a company sponsored 401(k)",
+                  "reservedName": null,
+                  "description": "While the setup fees and annual maintenance fees tend to be higher than a SIMPLE IRA, a company sponsored 401(k) has higher annual contribution limits. \n\nEmployees can contribute up to $18,500 annually vs $12,500 in a SIMPLE IRA.\n\nEmployers may make matching or profit sharing contributions up to 25% of compensation up to a total employee/employer contribution of $55,000.\n\nNote: Limits shown are are 2018 IRS limits.",
+                  "entitiesUsed": [],
+                  "call_node_id": null,
+                  "content": null,
+                  "contentRaw": [],
+                  "status": {},
+                  "createdAt": "2018-07-10T19:30:08.713Z",
+                  "updatedAt": "2018-07-10T19:40:16.855Z",
+                  "ownerId": "JU",
+                  "entityTypeId": "S1WeUcld9M",
+                  "entityType": {
+                    "displayName": "Advice",
+                    "displayNamePlural": "Advice",
+                    "id": "S1WeUcld9M",
+                    "name": "ADVICE"
+                  }
+                },
+                "advice": "Open a company sponsored 401(k)",
+                "data": {
+                  "base": {
+                    "meta": {},
+                    "id": "r1eKBtFf7X",
+                    "reservedName": null,
+                    "content": null,
+                    "contentRaw": [],
+                    "entitiesUsed": [],
+                    "entityTypeId": "S1WeUcld9M"
+                  },
+                  "formulas": [],
+                  "variables": []
+                }
+              }
+            ]
+          }
+        ],
+        "questionRuleVariableName": "rule_4_selection",
+        "ruleVariables": [
+          {
+            "id": "koPgvmiC0x",
+            "reservedName": "rule_4_selection",
+            "content": null,
+            "contentRaw": [],
+            "entitiesUsed": [],
+            "entityTypeId": "r1iNnz5_b",
+            "meta": {
+              "dataType": "MultipleChoice",
+              "values": [
+                {
+                  "meta": {},
+                  "id": "rJgOlYKz7m",
+                  "entityId": "JUrJgOlYKz7m",
+                  "name": "Having a low cost plan is most important.",
+                  "reservedName": null,
+                  "description": null,
+                  "entitiesUsed": [],
+                  "call_node_id": null,
+                  "content": null,
+                  "contentRaw": [],
+                  "status": {},
+                  "createdAt": "2018-07-10T19:28:48.210Z",
+                  "updatedAt": "2018-07-10T19:29:26.891Z",
+                  "ownerId": "JU",
+                  "entityTypeId": "S1pXhG9uZ",
+                  "entityType": {
+                    "displayName": "Condition",
+                    "displayNamePlural": "Conditions",
+                    "id": "S1pXhG9uZ",
+                    "name": "CONDITION"
+                  }
+                },
+                {
+                  "meta": {},
+                  "id": "HkeoxtFGm7",
+                  "entityId": "JUHkeoxtFGm7",
+                  "name": "Maximizing annual contributions is most important.",
+                  "reservedName": null,
+                  "description": null,
+                  "entitiesUsed": [],
+                  "call_node_id": null,
+                  "content": null,
+                  "contentRaw": [],
+                  "status": {},
+                  "createdAt": "2018-07-10T19:28:50.860Z",
+                  "updatedAt": "2018-07-10T19:30:05.063Z",
+                  "ownerId": "JU",
+                  "entityTypeId": "S1pXhG9uZ",
+                  "entityType": {
+                    "displayName": "Condition",
+                    "displayNamePlural": "Conditions",
+                    "id": "S1pXhG9uZ",
+                    "name": "CONDITION"
+                  }
+                }
+              ]
+            },
+            "result": {
+              "value": "'Invalid Value'"
+            }
+          }
+        ],
+        "ruleFormulas": []
+      }
+    }
+  }
+}
