@@ -16,10 +16,22 @@
 			  rx:2;
 			  ry:2;
 			}
+			.mininode rect{
+			  opacity:0.35;
+			  stroke:lightgrey;
+			  stroke-width:0.4px;
+			  rx:1;
+			  ry:1;
+			}
 			.link {
 			  fill: none;
 			  stroke: grey;
 			  stroke-width:1px;
+			}
+			.mini-link{
+			  fill: none;
+			  stroke: lightgrey;
+			  stroke-width:0.1px;
 			}
 			g.brush > .handle {
 				display: none;
@@ -27,11 +39,42 @@
 			.overlay {
 			  pointer-events: none;
 			}
+
+			.caption{
+			  position: absolute;
+			  width: 20em;
+			  color: white;
+			  padding: 1em;
+			  background-color: #0e242b;
+			  border-color: #0e242b transparent;
+			  border-radius: 5px;
+			  pointer-events: none;
+			}
+			.caption:before{
+			  position: absolute;
+			  top: -15px;
+			  content: '';
+			  width: 0px;
+			  height: 0px;
+			  border-color: inherit;
+			  border-width: 0 15px 15px;
+			  border-style: solid;
+			}
+			.caption  h3{ 
+			  color: white; 
+			  font-size:18px;
+			  margin:0px;
+			}
+
+			.caption p{
+			  font-size: 14px;
+			  margin:0px;
+			}
 		</style>
 	</head>
 	<body>
 		<script>
-				var input_file = "big.json"
+				var input_file = "small.json"
 
 				var i = 0,
 					mr = 4,
@@ -40,6 +83,7 @@
 
 				var width = 1000,
 					height = 600,
+					nodeWidth = 400,
 					minimapWidth = width/mr,
 					minimapHeight,brush,zoom;
 
@@ -48,6 +92,10 @@
 					.attr("height", height)
 					.append("g")
 
+				var caption = d3.select("body").append("div")
+					.attr("class", "caption")
+					.style("display", "none")
+					.style("opacity", 1e-6);
 
 				d3.json(input_file, function(error, mttree) {
 					if (error) {
@@ -89,25 +137,6 @@
 
 						root = d3.hierarchy(logic, function(d){return d.children || null})
 
-						//Create hidden svg text elements for each node to pre-compute their widths
-						root.descendants().forEach(function(d){
-							var name = d.data.entity.name
-							var g = document.createElementNS('http://www.w3.org/2000/svg','g')
-							var text = document.createElementNS('http://www.w3.org/2000/svg','text')
-							var innerText = document.createTextNode(name)
-							text.appendChild(innerText)
-							g.appendChild(text)
-							g.classList.add('node')
-							var svg = document.querySelector('svg')
-							svg.appendChild(g)
-							text.style.cssText="font: 18px;letter-spacing: 0.5px;"
-							var bbox_width = text.getBBox().width
-							text.removeChild(innerText)
-							g.removeChild(text)
-							svg.removeChild(g)
-							d.bbox_width = bbox_width
-						});
-
 						leafs = root.leaves().length
 						if(leafs > 15){
 							treemap = d3.tree().size([height * leafs/15, width])
@@ -117,9 +146,58 @@
 
 						treemap(root)
 
+						// Compute the new tree layout.
+						var nodes = root.descendants()
+						var links = nodes.slice(1)
+						
+						// Update the nodes...
+						var node_elems = svg.selectAll('g.node')
+							.data(nodes, function(d) {return d.id || (d.id = ++i) })
+							.enter().append('g')
+							.attr('class', 'node')
+							.attr("transform", function(d) { return `translate(${d.y},${d.x})`})
+							.on("click",clicked)
+							.on("mouseover", mouseover)
+							.on("mousemove", mousemove)
+							.on("mouseout", mouseout)
+
+						// Add labels for the nodes
+						node_elems.append("text")
+							.attr("x", -10)
+							.attr("dy", ".35em")
+							.attr("text-anchor", "start")
+							.style('font-size','20px')
+							.style('letter-spacing','0px')
+							.each(function(d) { 
+								var isTruncated = false,
+									name;
+								if(d.data.entity.entityType.name === "OUTCOME"){
+									name = d.data.entity.content
+								}else{
+									name = d.data.entity.name 
+								}
+								var text = d3.select(this)
+								text.html(name)
+								while(this.getBBox().width > nodeWidth){
+									isTruncated = true
+									name = name.substring(0,name.length-1)
+									text.html(name)
+								}
+								if(isTruncated) name = name + "..."
+								text.html(name)
+							})
+							.attr('textLength',function(d){return this.getBBox().width}) //fixes safari zoom bug
+							.each(function(d){
+								var bbox = this.getBBox()
+								bbox.width = nodeWidth + 10
+								d.bbox = bbox
+							})
+
+						
 						root.y = 100
 						var n = 1
-						var maxWidth = root.bbox_width
+						// var maxWidth = root.bbox.width
+						var maxWidth = nodeWidth
 						gWidth = 0
 
 						while(true){
@@ -128,10 +206,10 @@
 								if(d.depth===n){
 									d.y = d.parent.y + maxWidth + 100
 									level.push(d)
-									gWidth = Math.max(gWidth,d.y + d.bbox_width)
+									gWidth = Math.max(gWidth,d.y + d.bbox.width)
 								}
 							})
-							maxWidth = d3.max(level, d => d.bbox_width)
+							maxWidth = d3.max(level, d => d.bbox.width)
 							
 							if(level.length === 0){
 								break
@@ -144,38 +222,16 @@
 						gHeight = yMax - yMin
 						minZoom = width/gWidth
 						maxZoom = minZoom * 4
-						gHeight=gHeight > height / minZoom ? gHeight : height / minZoom 
-
-						// root.descendants().forEach(function(d){d.x = d.x + gHeight/2})
-
-						// Compute the new tree layout.
-						var nodes = root.descendants()
-						var links = nodes.slice(1)
+						gHeight=gHeight > height / minZoom ? gHeight : height / minZoom 					
 						
-						// Update the nodes...
-						var node_elems = svg.selectAll('g.node')
-							.data(nodes, function(d) {return d.id || (d.id = ++i) })
-							.enter().append('g')
-							.attr('class', 'node')
-							.attr("id", function(d) { return 'node' + d.id })
-							.attr("transform", function(d) { return `translate(${d.y},${d.x})`})
-							.on("click",clicked)
-
-						// Add labels for the nodes
-						node_elems.append("text")
-							.attr("x", -10)
-							.attr("dy", ".35em")
-							.attr("text-anchor", "start")
-							.html(function(d) { return d.data.entity.name })
-							.style('font','18px')
-							.style('letter-spacing','0.5px')
-							.attr('textLength',function(d){return this.getBBox().width})
+						node_elems.attr("transform", function(d) { return `translate(${d.y},${d.x})`})	
 
 						//Add rectangle surrounding node
 						node_elems.insert('rect','text')
 							.each(function(d){
 								var rect = d3.select(this)
-								var bbox = this.nextSibling.getBBox()
+								// var bbox = this.nextSibling.getBBox()
+								var bbox = d.bbox
 								var type = d.data.entity.entityType.name
 								if(type === 'TOPIC'){
 									color = "#6D256C"
@@ -220,6 +276,45 @@
 							.attr("width", minimapWidth)
 							.attr("height", minimapHeight)
 
+						var mini_elems = minimap.selectAll('g.node')
+							.data(nodes)
+							.enter().append('g')
+							.attr('class', 'mininode')
+							.attr("transform", function(d) { return `translate(${d.y/mr},${d.x/mr})`})
+
+						mini_elems.append('rect')
+							.each(function(d){
+								var rect = d3.select(this)
+								var type = d.data.entity.entityType.name
+								if(type === 'TOPIC'){
+									color = "#6D256C"
+								}else if(type === 'ADVICE' || type === 'OUTCOME'){
+									color = "#FAAB18"
+								}else if(type === 'INPUT_REQUEST'){
+									color = "#3DB1F2"
+								}else if(type === 'CONDITION'){
+									color = "#CE1B6D"
+								}else if(d.data.GOTO){
+									color = "yellow"
+								}else{
+									color = "white"
+								}
+									rect.attr('x', (d.bbox.x-5)/mr)
+										.attr('y',(d.bbox.y-2)/mr)
+										.attr('width', (d.bbox.width+10)/mr)
+										.attr('height',(d.bbox.height+4)/mr)
+										.attr('fill',color)
+										.attr('rx',2)
+										.attr('ry',2)
+							});
+
+						var link = minimap.selectAll('path.link')
+							.data(links)
+							.enter().insert('path','g')
+							.attr("class", "mini-link")
+							.attr('d', function(d){return mini_connection(d.parent, d)})
+
+
 						brush = d3.brush()
 							.extent([[0, 0], [minimapWidth, minimapHeight]])
 							.on("brush", brushed)
@@ -239,7 +334,7 @@
 
 				// Creates a right-angle path from parent to the child nodes
 				function connection(s, d) {
-					sY = s.y + s.bbox_width
+					sY = s.y + s.bbox.width
 					path = `M ${sY - 5} ${s.x}
 							L ${d.y - 45},${s.x}
 							L ${d.y - 45},${d.x}
@@ -247,13 +342,56 @@
 					return path
 				}
 
+				function mini_connection(s, d) {
+					sY = (s.y + s.bbox.width)/mr
+					sX = s.x/mr
+					dY = d.y/mr
+					dX = d.x/mr
+					path = `M ${sY - 5/mr} ${sX}
+							L ${dY - 45/mr},${sX}
+							L ${dY - 45/mr},${dX}
+							L ${dY - 15/mr},${dX}`
+					return path
+				}
+
 				function clicked(d){
 					console.log(d)
 				}
 
+				// Show the caption
+				function mouseover(d){
+					var name
+					if(d.data.entity.entityType.name === "OUTCOME"){ name = d.data.entity.content}
+					else{ name = d.data.entity.name}
+						caption
+						.html('<h3>' + d.data.entity.entityType.name + '</h3><p>' + name + '</p>')
+						// .style('background-color', d.data.color)
+						// .style('border-color', d.data.color + ' transparent')
+						.transition()
+						.duration(100)
+						.style("display", "block")
+						.style("opacity", 1);
+				}
+
+				// move caption pop-over as mouse moves
+				function mousemove(d){
+					caption
+						.style("left", (d3.event.pageX) + "px")
+						.style("top", (d3.event.pageY) + 20 + "px");
+				}
+
+				// hide caption
+				function mouseout(d){
+				caption.transition()
+					.duration(100)
+					.style("display", "none")
+					.style("opacity", 1e-6)
+				}	
+
 				svgEl = document.querySelector('svg')
 				
 				function zoomed(){
+				  caption.style("display","none")
 				  var t = d3.event.transform
 				  var kr = t.k/minZoom
 				  brush.move(d3.select('.brush'),	[	[-t.x/mr/t.k,
