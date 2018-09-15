@@ -1,0 +1,68 @@
+.minimap {
+  fill: white;
+  stroke: black;
+}
+.node { 
+  cursor: pointer; 
+}
+.node rect{
+  opacity:0.35;
+  stroke:black;
+  stroke-width:1.2px;
+  rx:2;
+  ry:2;
+}
+.mininode rect{
+  opacity:0.35;
+  stroke:lightgrey;
+  stroke-width:0.4px;
+  rx:1;
+  ry:1;
+}
+.link {
+  fill: none;
+  stroke: grey;
+  stroke-width:1px;
+}
+.mini-link{
+  fill: none;
+  stroke: lightgrey;
+  stroke-width:0.1px;
+}
+g.brush > .handle {
+	display: none;
+}
+.overlay {
+  pointer-events: none;
+}
+
+.caption{
+  position: absolute;
+  width: 20em;
+  color: white;
+  padding: 1em;
+  background-color: #0e242b;
+  border-color: #0e242b transparent;
+  border-radius: 5px;
+  pointer-events: none;
+}
+.caption:before{
+  position: absolute;
+  top: -15px;
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-color: inherit;
+  border-width: 0 15px 15px;
+  border-style: solid;
+}
+.caption  h3{ 
+  color: white; 
+  font-size:18px;
+  margin:0px;
+}
+
+.caption p{
+  font-size: 14px;
+  margin:0px;
+}

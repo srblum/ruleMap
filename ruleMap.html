@@ -1,88 +1,21 @@
 <!DOCTYPE html>
+<html>
 	<head>
+		<script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
 		<script src="https://d3js.org/d3.v4.min.js"></script>
-		<style>
-			.minimap {
-			  fill: white;
-			  stroke: black;
-			}
-			.node { 
-			  cursor: pointer; 
-			}
-			.node rect{
-			  opacity:0.35;
-			  stroke:black;
-			  stroke-width:1.2px;
-			  rx:2;
-			  ry:2;
-			}
-			.mininode rect{
-			  opacity:0.35;
-			  stroke:lightgrey;
-			  stroke-width:0.4px;
-			  rx:1;
-			  ry:1;
-			}
-			.link {
-			  fill: none;
-			  stroke: grey;
-			  stroke-width:1px;
-			}
-			.mini-link{
-			  fill: none;
-			  stroke: lightgrey;
-			  stroke-width:0.1px;
-			}
-			g.brush > .handle {
-				display: none;
-			}
-			.overlay {
-			  pointer-events: none;
-			}
-
-			.caption{
-			  position: absolute;
-			  width: 20em;
-			  color: white;
-			  padding: 1em;
-			  background-color: #0e242b;
-			  border-color: #0e242b transparent;
-			  border-radius: 5px;
-			  pointer-events: none;
-			}
-			.caption:before{
-			  position: absolute;
-			  top: -15px;
-			  content: '';
-			  width: 0px;
-			  height: 0px;
-			  border-color: inherit;
-			  border-width: 0 15px 15px;
-			  border-style: solid;
-			}
-			.caption  h3{ 
-			  color: white; 
-			  font-size:18px;
-			  margin:0px;
-			}
-
-			.caption p{
-			  font-size: 14px;
-			  margin:0px;
-			}
-		</style>
+		<link rel="stylesheet" href="ruleMap.css">
 	</head>
 	<body>
 		<script>
-				var input_file = "big.json"
+				var input_file = "bigger.json"
 
 				var i = 0,
 					mr = 4,
 					nodeSuggestions = [],
-					root,gWidth,minZoom;
+					root,gWidth,minZoom,brushZoom;
 
 				var width = 1000,
-					height = 600,
+					height = 750,
 					nodeWidth = 400,
 					minimapWidth = width/mr,
 					minimapHeight,brush,zoom;
@@ -90,7 +23,11 @@
 				var svg = d3.select("body").append("svg")
 					.attr("width", width)
 					.attr("height", height)
+					.attr('id','main-svg')
 					.append("g")
+
+				var miniSVG = d3.select("body").append("svg")
+					.attr('id', 'mini-svg')
 
 				var caption = d3.select("body").append("div")
 					.attr("class", "caption")
@@ -107,29 +44,38 @@
 
 						function remove_GOTOs_and_ARFs(d){
 							var nodes = [d];
-							while(node = nodes.pop()){
-								if(node.GOTO){
-									var children = subRules[node.GOTO]['children']
-									node.children = children
-									// nodes.push.apply(nodes,children)
-								}
-								if(node.children){
+							var parent = null;
+							while(node = nodes.pop()){ //set children of EMBEDDED RULES to children of subrule
+								if(node.children){ //add children to queue
 									var newChildren = []
 									for(var i=0; i<node.children.length;i++){
 										var child = node.children[i]
-										if(child.entity.entityType.name==='CONDITION_ALWAYS'){
+										if(child.entity.entityType.name==='CONDITION_ALWAYS'){//if ARF, add grandchildren instead
 											for(var j=0;j<child.children.length;j++){
 												var grandChild = child.children[j]
-												newChildren.push(grandChild)
-												nodes.push(grandChild)
+												if(grandChild.entity.entityType.name==='EMBEDDED_RULE'){
+													grandChild = subRules[grandChild.GOTO]
+													newChildren.push(grandChild)
+													nodes.push(grandChild)
+												}else{
+													newChildren.push(grandChild)
+													nodes.push(grandChild)
+												}
 											}
-										}else{
+										}
+										else if(child.entity.entityType.name==='EMBEDDED_RULE'){
+											child = subRules[child.GOTO]
+											newChildren.push(child)
+											nodes.push(child)
+										}
+										else{
 											newChildren.push(child)
 											nodes.push(child)
 										}
 									}
 									node.children = newChildren
 								}
+								parent = node
 							}
 						}
 
@@ -219,10 +165,21 @@
 
 						yMin = d3.min(root.leaves(),d=>+d.x)
 						yMax = d3.max(root.leaves(),d=>+d.x)
-						gHeight = yMax - yMin
+						gHeight = yMax - yMin + 200
+						gWidth += 200
+
+						height = width * gHeight/gWidth
+						if (height > 750){
+							height = 750
+							width = height * gWidth/gHeight
+							d3.select('svg').attr("width", width)
+						}else{
+							d3.select('svg').attr("height", height)
+						}
+
 						minZoom = width/gWidth
+					
 						maxZoom = minZoom * 4
-						gHeight=gHeight > height / minZoom ? gHeight : height / minZoom 					
 						
 						node_elems.attr("transform", function(d) { return `translate(${d.y},${d.x})`})	
 
@@ -265,9 +222,12 @@
 						minimapHeight = minimapWidth * gHeight/gWidth
 						mr = gWidth / minimapWidth
 
-						minimap = d3.select('svg')
+						minimap = d3.select('#mini-svg')
+							.attr('width',minimapWidth)
+							.attr('height',minimapHeight)
+							.attr('id','mini-svg')
 							.append('g')
-							.attr("transform", "translate(" + (width - minimapWidth)  + "," +  (height - minimapHeight) + ")");
+							// .attr("transform", "translate(" + (width - minimapWidth)  + "," +  (height - minimapHeight) + ")");
 
 						minimap.raise()
 
@@ -306,14 +266,13 @@
 										.attr('fill',color)
 										.attr('rx',2)
 										.attr('ry',2)
-							});
+							})
 
 						var link = minimap.selectAll('path.link')
 							.data(links)
 							.enter().insert('path','g')
 							.attr("class", "mini-link")
 							.attr('d', function(d){return mini_connection(d.parent, d)})
-
 
 						brush = d3.brush()
 							.extent([[0, 0], [minimapWidth, minimapHeight]])
@@ -323,19 +282,30 @@
 								.translateExtent([[0,0],[gWidth,gHeight]])
 								.scaleExtent([minZoom,maxZoom])
 
-						d3.select('svg').call(zoom)
+						d3.select('#main-svg').call(zoom)
 							.on("dblclick.zoom", null)
+
+						brushZoom = d3.zoom().on("zoom",brushZoomed)
+							.scaleExtent([minZoom,maxZoom])
 
 						minimap.append("g")
 							.attr("class", "brush")
 							.call(brush)
 							.call(brush.move, [[0, 0], [minimapWidth/2, minimapHeight/2]])
-				}});
+
+						d3.select('#mini-svg').call(brushZoom)
+							.on("dblclick.zoom",null)
+							.on("mousedown.zoom", null)
+							.on("touchstart.zoom", null)
+							.on("touchmove.zoom", null)
+							.on("touchend.zoom", null);
+
+				}})
 
 				// Creates a right-angle path from parent to the child nodes
 				function connection(s, d) {
-					sY = s.y + s.bbox.width
-					path = `M ${sY - 5} ${s.x}
+					var sY = s.y + s.bbox.width
+					var path = `M ${sY - 5} ${s.x}
 							L ${d.y - 45},${s.x}
 							L ${d.y - 45},${d.x}
 							L ${d.y - 15},${d.x}`
@@ -343,11 +313,11 @@
 				}
 
 				function mini_connection(s, d) {
-					sY = (s.y + s.bbox.width)/mr
-					sX = s.x/mr
-					dY = d.y/mr
-					dX = d.x/mr
-					path = `M ${sY - 5/mr} ${sX}
+					var sY = (s.y + s.bbox.width)/mr
+					var sX = s.x/mr
+					var dY = d.y/mr
+					var dX = d.x/mr
+					var path = `M ${sY - 5/mr} ${sX}
 							L ${dY - 45/mr},${sX}
 							L ${dY - 45/mr},${dX}
 							L ${dY - 15/mr},${dX}`
@@ -355,7 +325,9 @@
 				}
 
 				function clicked(d){
-					console.log(d)
+					var ruleId = d.data.ruleSetId
+					var selectedNodeId = d.data.id
+					window.open(`https://staging.justgoodadvice.com/rules/${ruleId}?selectedNodeId=${selectedNodeId}`)
 				}
 
 				// Show the caption
@@ -365,8 +337,6 @@
 					else{ name = d.data.entity.name}
 						caption
 						.html('<h3>' + d.data.entity.entityType.name + '</h3><p>' + name + '</p>')
-						// .style('background-color', d.data.color)
-						// .style('border-color', d.data.color + ' transparent')
 						.transition()
 						.duration(100)
 						.style("display", "block")
@@ -388,17 +358,53 @@
 					.style("opacity", 1e-6)
 				}	
 
-				svgEl = document.querySelector('svg')
+				svgEl = document.getElementById('main-svg')
+				svgMiniEl = document.getElementById('mini-svg')
 				
 				function zoomed(){
 				  caption.style("display","none")
 				  var t = d3.event.transform
-				  var kr = t.k/minZoom
 				  brush.move(d3.select('.brush'),	[	[-t.x/mr/t.k,
 				  										-t.y/mr/t.k],
-				  										[-t.x/mr/t.k+minimapWidth/kr,
-				  										-t.y/mr/t.k+minimapHeight/kr]
+				  										[(-t.x/mr+minimapWidth*minZoom)/t.k,
+				  										(-t.y/mr+minimapHeight*minZoom)/t.k]
 				  									]);
+				}
+
+				var x0,x1,y0,y1,scale;
+
+				function brushZoomed(){
+					var k = d3.event.transform.k
+					if(k > maxZoom) k = maxZoom;
+					if(k < minZoom) k = minZoom;
+					var kr = scale/k
+					var midX = (x0 + x1)/2
+					var midY = (y0 + y1)/2
+					var radX = (x1 - x0)/2 * kr
+					var radY = (y1 - y0)/2 * kr
+
+					x0 = midX - radX
+					x1 = midX + radX
+					y0 = midY - radY
+					y1 = midY + radY
+
+					if(x0 < 0){
+						x1 += -x0
+						x0 = 0
+					}
+					if(x1 > minimapWidth){
+						x0 -= x1 - minimapWidth
+						x1 = minimapWidth
+					}
+					if(y0 < 0){
+						y1 += -y0
+						y0 = 0
+					}
+					if(y1 > minimapHeight){
+						y0 -= y1 - minimapHeight
+						y1 = minimapHeight
+					}
+					brush.move(d3.select('.brush'),	[[x0,y0],[x1,y1]] );
 				}
 				
 				function brushed() {
@@ -407,18 +413,27 @@
 				  var c1 = s[1]
 
 				  //minimap coordinates
-				  var x0 = c0[0]
-				  var y0 = c0[1]
-				  var x1 = c1[0]
-				  var y1 = c1[1]
+				  x0 = c0[0]
+				  y0 = c0[1]
+				  x1 = c1[0]
+				  y1 = c1[1]
 
-				  var scale = minimapWidth/(x1-x0) * minZoom
+				  scale = minimapWidth/(x1-x0) * minZoom
 
 				  svgEl.__zoom.x = -x0*scale*mr
 				  svgEl.__zoom.y = -y0*scale*mr
 				  svgEl.__zoom.k = scale
 
+				  if(svgMiniEl.__zoom === undefined){
+				  	svgMiniEl.__zoom = jQuery.extend({}, svgEl.__zoom)
+				  }
+
+				  svgMiniEl.__zoom.x = -x0*scale
+				  svgMiniEl.__zoom.y = -y0*scale
+				  svgMiniEl.__zoom.k = scale
+
 				  svg.attr("transform",`translate(${-x0*scale*mr},${-y0*scale*mr})scale(${scale})`)
 				}
 		</script>
 	</body>
+</html>
